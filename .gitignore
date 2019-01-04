@@ -1,0 +1,7 @@
+.idea
+/*.php
+/*.txt
+/*.json
+/phpMyAdmin/
+/sqlli/
+think

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>今日快报</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css" />
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+<body>
+    {include file="../application/index/view/common/menu.html" /}
+    <div class="list">
+        {foreach $list as $l}
+        <li class="item"><a target="_blank" href="/detail/{$current}/{$l.id}">{$l.title}</a></li>
+        {/foreach}
+        {if $hasMore}
+        <li class="item more" data-index="10" data-current="{$current}"><a href="javascript:void(0);">查看更多</a></li>
+        {/if}
+    </div>
+    {include file="common/footer" /}
+    <script type="text/javascript">
+        var ls = $('.list');
+        ls.on('click','.more', function(){
+            var index = $(this).data('index'),
+                current = $(this).data('current');
+            $.get('/more/' + current, { index:index }, function(data){
+                $('.more', ls).remove();
+                ls.append(data);
+            });
+        });
+    </script>
+</body>
+</html>

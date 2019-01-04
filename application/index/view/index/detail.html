@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{$detail.title}--今日快报</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css">    
+<body>
+    {include file="common/menu" /}
+    <div class="detail">
+        <div class="wrap">
+            {if $isLogin}
+            <div class="left">
+            {/if}
+                <h1>{$detail.title}</h1>
+                {empty name="detail.sub_title"}
+                <h2 class="sub-title">{$detail.sub_title}</h2>
+                {/empty}
+                <h3 class="info">
+                    <span class="author">作者:{$detail.author}</span>
+                    <span class="origin">来源:{$detail.origin}</span>
+                    <span class="time">时间:{$detail.create_time}</span>
+                    <span class="label">标签:{foreach $labels as $l} {$l.name}&nbsp;{/foreach}</span>
+                </h3>
+                <section>{$detail.content}</section>
+            {if $isLogin}
+            </div>
+            <div class="right">
+                <h2>猜你喜欢</h2>
+                <ul>
+                    {foreach $favors as $f}
+                    <li class="item"><a target="_blank" href="/detail/{$f.code}/{$f.id}">{$f.title}</a></li>
+                    {/foreach}
+                </ul>
+            </div>
+            {/if}
+        </div>
+        <div class="comment-wrap">
+            {empty name="comments"}
+                <span class="center">还没有评论</span>
+            {else /}
+                <ul class="comments">
+                {foreach $comments as $c}
+                    <li>{$c.content}</li>
+                {/foreach}
+                </ul>
+            {/empty}
+        </div>
+    </div>
+    {include file="common/footer" /}
+</body>
+</html>
