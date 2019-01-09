@@ -35,15 +35,19 @@
             {/if}
         </div>
         <div class="comment-wrap">
+        {if $isLogin}
             {empty name="comments"}
                 <span class="center">还没有评论</span>
             {else /}
                 <ul class="comments">
                 {foreach $comments as $c}
-                    <li>{$c.content}</li>
+                    <li>{$user.name}:{$c.content}</li>
                 {/foreach}
                 </ul>
             {/empty}
+        {else /}
+            <a href="/login">登录</a>后查看评论
+        {/if}
         </div>
     </div>
     {include file="common/footer" /}

@@ -58,6 +58,7 @@ class Index extends Controller
             }
             $favors = $news->getFavor($id,$temps);
             $param['favors'] = $favors;
+            $param['user'] = Author::getUser();
         }
         return view('detail', $param);
     }

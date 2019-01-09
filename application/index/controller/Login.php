@@ -14,7 +14,7 @@ class Login extends Controller
             $password = md5(input('post.password'));
             $user = User::get(['name' => $uname, 'password' => $password]);
             if($user){
-                Session::set('uid', $user->id);
+                Session::set('uid', $user);
                 $this->redirect('/');
             }else{
                 return view('login',['msg' => '用户名密码错误']);
@@ -25,6 +25,6 @@ class Login extends Controller
     }
     public function out(){
         Session::clear();
-        $this->redirect('/login');
+        $this->redirect('/');
     }
 }
