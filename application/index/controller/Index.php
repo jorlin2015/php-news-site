@@ -40,7 +40,8 @@ class Index extends Controller
     public function detail($current, $id){
         $news = new News();
         $detail = $news->get($id);
-        $comments = Comment::all(['news_id'=>$id]);
+        // $comments = Comment::all(['news_id'=>$id]);
+        $comments = $detail->comments;
         $label = new Label();
         $labels = $label->getList($id);
         $param = [

@@ -41,7 +41,7 @@
             {else /}
                 <ul class="comments">
                 {foreach $comments as $c}
-                    <li>{$user.name}:{$c.content}</li>
+                    <li>{$c.content}</li>
                 {/foreach}
                 </ul>
             {/empty}

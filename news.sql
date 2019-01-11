@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2019-01-09 19:48:06
+Date: 2019-01-11 19:28:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -46,6 +46,7 @@ CREATE TABLE `t_comment` (
   `news_id` bigint(20) NOT NULL,
   `content` varchar(255) NOT NULL,
   `parent_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `user_id` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `新闻ID` (`news_id`) USING BTREE
 ) ENGINE=MyISAM AUTO_INCREMENT=81 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
@@ -53,46 +54,46 @@ CREATE TABLE `t_comment` (
 -- ----------------------------
 -- Records of t_comment
 -- ----------------------------
-INSERT INTO `t_comment` VALUES ('41', '1', '评论:回首2018 重温习近平这18句话', '0');
-INSERT INTO `t_comment` VALUES ('42', '2', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('43', '3', '评论:第一个军事', '0');
-INSERT INTO `t_comment` VALUES ('44', '4', '评论:第一个财经', '0');
-INSERT INTO `t_comment` VALUES ('45', '5', '评论:第一个娱乐', '0');
-INSERT INTO `t_comment` VALUES ('46', '6', '评论:第一个科技', '0');
-INSERT INTO `t_comment` VALUES ('47', '7', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('48', '8', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('49', '9', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('50', '10', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('51', '11', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('52', '12', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('53', '13', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('54', '14', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('55', '15', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('56', '16', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('57', '17', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('58', '18', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('59', '19', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('60', '20', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('61', '21', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('62', '22', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('63', '23', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('64', '24', '评论:述评：中国改革开放宣言的世界回响', '0');
-INSERT INTO `t_comment` VALUES ('65', '25', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('66', '26', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('67', '27', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('68', '28', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('69', '29', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('70', '30', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('71', '31', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('72', '32', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('73', '33', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('74', '34', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('75', '35', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('76', '36', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('77', '37', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('78', '38', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('79', '39', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
-INSERT INTO `t_comment` VALUES ('80', '40', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0');
+INSERT INTO `t_comment` VALUES ('41', '1', '评论:回首2018 重温习近平这18句话', '0', null);
+INSERT INTO `t_comment` VALUES ('42', '2', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('43', '3', '评论:第一个军事', '0', null);
+INSERT INTO `t_comment` VALUES ('44', '4', '评论:第一个财经', '0', null);
+INSERT INTO `t_comment` VALUES ('45', '5', '评论:第一个娱乐', '0', null);
+INSERT INTO `t_comment` VALUES ('46', '6', '评论:第一个科技', '0', null);
+INSERT INTO `t_comment` VALUES ('47', '7', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('48', '8', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('49', '9', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('50', '10', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('51', '11', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('52', '12', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('53', '13', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('54', '14', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('55', '15', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('56', '16', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('57', '17', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('58', '18', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('59', '19', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('60', '20', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('61', '21', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('62', '22', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('63', '23', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('64', '24', '评论:述评：中国改革开放宣言的世界回响', '0', null);
+INSERT INTO `t_comment` VALUES ('65', '25', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('66', '26', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('67', '27', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('68', '28', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('69', '29', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('70', '30', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('71', '31', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('72', '32', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('73', '33', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('74', '34', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('75', '35', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('76', '36', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('77', '37', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('78', '38', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('79', '39', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
+INSERT INTO `t_comment` VALUES ('80', '40', '评论:曝杜兰特逼勇士交易格林：不要再跟我扯其它的，我现在只想要钱！', '0', null);
 
 -- ----------------------------
 -- Table structure for t_label

@@ -40,5 +40,8 @@ class News extends Model{
 				->select();
 		return $list;
 	}
+	public function comments(){
+		return $this->hasMany('Comment', 'news_id')->field('content');
+	}
 }
 ?>
