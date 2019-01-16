@@ -41,7 +41,10 @@ class News extends Model{
 		return $list;
 	}
 	public function comments(){
-		return $this->hasMany('Comment', 'news_id')->field('content');
+		return $this->hasMany('Comment', 'news_id');
+	}
+	public function labels(){
+		return $this->belongsToMany('Label','NewsLabel');
 	}
 }
 ?>

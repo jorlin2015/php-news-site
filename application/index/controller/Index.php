@@ -40,10 +40,8 @@ class Index extends Controller
     public function detail($current, $id){
         $news = new News();
         $detail = $news->get($id);
-        // $comments = Comment::all(['news_id'=>$id]);
         $comments = $detail->comments;
-        $label = new Label();
-        $labels = $label->getList($id);
+        $labels = $detail->labels;
         $param = [
             'category' => $this->category,
             'current' => $current,
@@ -59,7 +57,6 @@ class Index extends Controller
             }
             $favors = $news->getFavor($id,$temps);
             $param['favors'] = $favors;
-            $param['user'] = Author::getUser();
         }
         return view('detail', $param);
     }
