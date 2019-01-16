@@ -4,6 +4,5 @@
 /*.json
 /phpMyAdmin/
 /sqlli/
-composer.lock
 .travis.yml
 /think
