@@ -6,4 +6,4 @@
 /sqlli/
 composer.lock
 .travis.yml
-think
+/think
