@@ -17,5 +17,6 @@ return [
     'logout' => ['login/out', ['method' => 'get']],
     'more/:current' => ['index/more', ['method' => 'get']],
     'index/:current'   => ['index/index', ['method' => 'get']],
-    'detail/:current/:id' => ['index/detail',['method' => 'get'], ['id' => '\d+']]
+    'detail/:current/:id' => ['index/detail',['method' => 'get'], ['id' => '\d+']],
+    'splider/[:name]/[:limit]/[:start]' => ['pictures/index', ['method' => 'get']]
 ];
