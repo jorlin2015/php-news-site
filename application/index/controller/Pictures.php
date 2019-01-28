@@ -8,7 +8,6 @@ class Pictures extends Controller
 {
     public function index($name='自然田园风光', $limit=30, $start=0)
     {
-        var_dump($name,$limit,$start);
         $data = Splider::getBaiduImg($name,$limit,$start);
         $data['keyword'] = $name;
         return view('splider',$data);
