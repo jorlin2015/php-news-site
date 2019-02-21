@@ -29,13 +29,16 @@ class ActiveUsers
 		$dates = $this->getDays();
 		$sum = 0;
 		foreach ($dates as $key => $value) {
-			print_r(self::$path.$value.'.txt');
-			$res = file_get_contents(self::$path.$value.'.txt');
-			preg_match_all('/images\/o.gif\?(.*action=page-access.*) HTTP\/1.1"/',$res,$matches);
+			$matches = $this->getMatches(self::$path.$value.'.txt');
 			$actives = $this->getDayActives($matches[1]);
 			$sum += count($actives);
 		}
 		print_r(round($sum / count($dates)));
+	}
+	private function getMatches($fileName){
+		$res = file_get_contents($fileName);
+		preg_match_all('/images\/o.gif\?(.*action=page-access.*) HTTP\/1.1"/',$res,$matches);
+		return $matches;
 	}
 	private function getDayActives($data){
 		$result = [];
