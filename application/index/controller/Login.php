@@ -30,8 +30,6 @@ class Login extends BaseController
         $this->redirect('/');
     }
     public function register(){
-        var_dump('ddddddddddd');
-        var_dump(request()->isPost());
         if(request()->isPost()){
             $uname = input('post.username');
             $password = md5(input('post.password'));

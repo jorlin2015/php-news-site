@@ -17,6 +17,11 @@ class Friend extends Model
 	}
 	public static function toBeFriend($uid,$fid){
 		$time = DateUtil::getMillisecond();
-		return Db::execute(self::TOBEFRIENDSQL, ["uid" => $uid, "fid" => $fid, "time" => $time]);
+		$arr = [
+			str_replace(":time", $time,str_replace(":fid", $fid,str_replace(":uid", $uid,self::TOBEFRIENDSQL))),
+			str_replace(":time", $time,str_replace(":fid", $uid,str_replace(":uid", $fid,self::TOBEFRIENDSQL)))
+		];
+		return Db::batchQuery($arr);
+		/*return Db::execute(self::TOBEFRIENDSQL, ["uid" => $uid, "fid" => $fid, "time" => $time]);*/
 	}
 }
