@@ -1,18 +1,56 @@
 <?php
 namespace logAnalysis;
 
+require_once('DayLogFile.php');
+require_once('StorageData.php');
+use logAnalysis\DayLogFile;
+use logAnalysis\StorageData;
 /**
 * 统计教师空间日活,月活
 */
-class ActiveUsers
+class LogAnalysis
 {
-	
-	private static $path = 'E:\log-238\localhost_access_log..';
+	private $pSize = 5;
+	private $pools = [];
 	function __construct($start, $end){
 		$this->start = $start;
 		$this->end = $end;
+		$this->result = new StorageData();
 	}
-	// private static $path = 'E:\log.txt';
+	public function analysisByDay(){
+		$dates = $this->getDays();
+		$this->days = count($dates);
+		$this->enterPools($dates);
+		//线程池没满就新建线程加入线程池,否则等待线程池有空闲
+		while (count($dates) > 0) {
+			foreach ($this->pools as $key => $worker) {
+				if(!$worker->isrunning()){
+					$fileName = array_shift($dates);
+					$pools[$key] = new DayLogFile($fileName, $this->result);
+					$pools[$key]->start();
+				}
+			}
+			usleep(1000);
+		}
+		$sum = 0;
+		foreach ($this->result as $key => $value) {
+			foreach ($value as $key1 => $value1) {
+				$sum += $value1;
+			}
+		}
+		/*var_dump($sum);
+		var_dump($this->days);*/
+		var_dump(round($sum / $this->days));
+	}
+	private function enterPools($dates){
+		$size = $this->pSize > $this->days ? $this->pSize : $this->days;
+		if(count($this->pools) < $size){
+			$fileName = array_shift($dates);
+			$work = new DayLogFile($fileName, $this->result);
+			array_push($this->pools, $work);
+			$work->start();
+		}
+	}
 	private function getDays(){
 		$date1 = date_create($this->start);
 		$date2 = date_create($this->end);
@@ -25,35 +63,7 @@ class ActiveUsers
 		}
 		return $result;
 	}
-	public function analysisByDay(){
-		$dates = $this->getDays();
-		$sum = 0;
-		foreach ($dates as $key => $value) {
-			$matches = $this->getMatches(self::$path.$value.'.txt');
-			$actives = $this->getDayActives($matches[1]);
-			$sum += count($actives);
-		}
-		print_r(round($sum / count($dates)));
-	}
-	private function getMatches($fileName){
-		$res = file_get_contents($fileName);
-		preg_match_all('/images\/o.gif\?(.*action=page-access.*) HTTP\/1.1"/',$res,$matches);
-		return $matches;
-	}
-	private function getDayActives($data){
-		$result = [];
-		foreach ($data as $key => $value) {
-			parse_str($value, $tempt);
-			// print_r($tempt['uId']);
-			if(isset($tempt['uId'])){
-				array_push($result,$tempt['uId']);
-			}else{
-				array_push($result,$tempt['teacher_id']);
-			}
-		}
-		return array_unique($result);
-	}
 }
-$obj = new ActiveUsers('2019-01-01', '2019-01-31');
+$obj = new LogAnalysis('2019-01-01', '2019-02-16');
 $obj->analysisByDay();
 ?>
