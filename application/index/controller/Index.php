@@ -1,75 +1,64 @@
 <?php
 namespace app\index\controller;
 
-use app\index\model\Category;
-use app\index\model\News;
-use app\index\model\Label;
-use app\index\model\Comment;
-use think\Controller;
+use common\BaseController;
 use common\Author;
+use app\index\model\User;
+use app\index\model\RoomUser;
+use app\index\model\Friend;
+use app\index\model\MessageRoom;
+use app\index\model\MessagePrivate;
 
-class Index extends Controller
+class Index extends BaseController
 {
-    protected $beforeActionList = [
-        // 'first',
-        'getCategory' => ['except'=>'more']
-    ];
-    public function first(){
-        if(!Author::isLogin()){
-            $this->redirect('/login');
-        }
-    }
-    public function getCategory(){
-        if(!isset($this->category)){
-            $this->category = (new Category())->getList();
-        }
-    }
-    public function index($current='xinwen')
+    public function index()
     {
-        $news = new News();
-        $list = $news->getList($current);
-        $count = $news->getCount($current);
-        return view('index', [
-            'category' => $this->category,
-            'list' => $list,
-            'current' => $current,
-            'hasMore' => $count > 10,
-            'isLogin' => Author::isLogin()
-        ]);
-    }
-    public function detail($current, $id){
-        $news = new News();
-        $detail = $news->get($id);
-        $comments = $detail->comments;
-        $labels = $detail->labels;
-        $param = [
-            'category' => $this->category,
-            'current' => $current,
-            'detail' => $detail,
-            'labels' => $labels,
-            'comments' => $comments,
-            'isLogin' => Author::isLogin()
+        $user = Author::getUser();
+        $uid = $user["user_id"];
+        $params = [
+            "user" => $user
         ];
-        if($param['isLogin']){
-            $temps = [];
-            foreach ($labels as $l) {
-                array_push($temps, $l['id']);
-            }
-            $favors = $news->getFavor($id,$temps);
-            $param['favors'] = $favors;
-        }
-        return view('detail', $param);
+        return view('index', $params);
     }
-    public function more($current){
-        $news = new News();
-        $index = input('index');
-        $list = $news->getList($current, $index);
-        $count = $news->getCount($current);
-        return view('more', [
-            'list' => $list,
-            'index' => $index + 10,
-            'hasMore' => $count > $index + 10,
-            'current' => $current
-        ]);
+    /**
+     *根据房间id获取房间成员
+     */
+    public function getRoomMember(){
+        $id = input('get.id');
+        $result = RoomUser::getUserByRoom($id);
+        return json($result);
+    }
+    public function getMessage(){
+        $type = input('get.type');
+        $id = input('get.id');
+    	switch ($type) {
+            case '1'://房间
+                $result = $this->getMessageFromRoom($id);
+                break;
+            case '2'://好友
+                $result = $this->getMessageFromFriend($id);
+                break;
+        }
+    	return json($result);
+    }
+    public function getContacts(){
+        $user = Author::getUser();
+        $uid = $user["user_id"];
+        $rooms = RoomUser::getRoomByUser($uid);
+        $friends = Friend::getFriendByUser($uid);
+        return json(array_merge($rooms,$friends));
+    }
+    public function toBeFriend(){
+        $id = input('post.id');
+        $user = Author::getUser();
+        $uid = $user["user_id"];
+        return json(['result' => Friend::toBeFriend($uid, $id)]);
+    }
+    private function getMessageFromRoom($id){
+        return MessageRoom::getMessage($id);     
+    }
+    private function getMessageFromFriend($id){
+        $uid = (Author::getUser())["user_id"];
+        return MessagePrivate::getMessage($id, $uid);
     }
 }

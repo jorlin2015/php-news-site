@@ -2,31 +2,37 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>今日快报</title>
+    <title>聊天室</title>
     <link rel="stylesheet" type="text/css" href="/static/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css" />
     <script type="text/javascript" src="/static/js/jquery.js"></script>
 </head>
-<body>
-    {include file="../application/index/view/common/menu.html" /}
-    <div class="list">
-        {foreach $list as $l}
-        <li class="item"><a target="_blank" href="/detail/{$current}/{$l.id}">{$l.title}</a></li>
-        {/foreach}
-        {if $hasMore}
-        <li class="item more" data-index="10" data-current="{$current}"><a href="javascript:void(0);">查看更多</a></li>
-        {/if}
+<body data-id="{$user.user_id}" data-name="{$user.user_alias}">
+    <div class="banner-container">
+        <span class="welcome">欢迎{$user.user_alias}</span><a href="/logout" class="logout">退出</a>
     </div>
-    {include file="common/footer" /}
-    <script type="text/javascript">
-        var ls = $('.list');
-        ls.on('click','.more', function(){
-            var index = $(this).data('index'),
-                current = $(this).data('current');
-            $.get('/more/' + current, { index:index }, function(data){
-                $('.more', ls).remove();
-                ls.append(data);
-            });
-        });
-    </script>
+    <div class="im-container">
+        <ul class="contacts-container">
+        </ul>
+        <div class="msg-container">
+            <div class="msg-title">
+            </div>
+            <div class="msg-content">
+                <div class="msg-content-scroll">
+                </div>
+            </div>
+            <div class="msg-send-wrap">
+                <textarea class="msg-send-content"></textarea>
+                <div class="msg-btn-wrap">
+                    <a class="msg-send-btn" href="javascript:void(0)">发送</a>
+                </div>
+            </div>
+        </div>
+        <ul class="room-contacts-container">
+            
+        </ul>
+    </div>
+    <script type="text/javascript" src="/static/js/index.js"></script>
+    <script type="text/javascript" src="/static/js/chat.js"></script>
 </body>
 </html>

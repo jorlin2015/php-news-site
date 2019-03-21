@@ -1,0 +1,125 @@
+.banner-container {
+	width: 805px;
+	background: #fff;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 auto;
+	padding: 0 20px;
+	border: solid 1px #dee6ee;
+}
+.banner-container .welcome {
+	float: left;
+}
+.banner-container .logout {
+	float: right;
+}
+.im-container {
+	width: 805px;
+	background: #fff;
+	overflow: hidden;
+	padding: 20px;
+	position: absolute;
+	top: 50px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	min-height: 400px;
+	border: solid 1px #dee6ee;
+}
+
+ .contacts-container,  .room-contacts-container {
+	float: left;
+	width: 200px;
+	height: 100%;
+	border: solid 1px #dee6ee;
+}
+ .contacts-container .item a {
+	padding-left: 10px;
+	line-height: 24px;
+	height: 24px;
+	display: block;
+}
+ .contacts-container .item a.current {
+	color: white;
+	background: #089;
+	cursor: default;
+}
+
+ .msg-container {
+	float: left;
+	width: 600px;
+	height: 100%;
+	background-color:#F4F7FA;
+	position: relative;
+	border: 1px solid #dee6ee;
+    border-left: none;
+}
+ .msg-container.room-msg {
+	width: 400px;
+}
+ .room-contacts-container {
+	display: none;
+	border-left: none;
+}
+ .room-contacts-container.active {
+	display: block;
+}
+.room-contacts-container .item a, .room-contacts-container .item span {
+	padding-left: 10px;
+	line-height: 24px;
+}
+.msg-container .msg-title {
+	border-bottom: 1px solid #dee6ee;
+	height: 50px;
+	padding-left: 20px;
+	line-height: 50px;
+}
+.msg-container .msg-content {
+	position: absolute;
+	top: 51px;
+	bottom: 113px;
+	left: 0;
+	right: 0;
+	overflow: auto;
+}
+.msg-container .chat-item {
+	padding: 10px;
+	overflow: hidden;
+	line-height: 20px;
+}
+.msg-container .chat-item.chat-me span {
+	float: right;
+}
+.msg-container .chat-item.chat-other span {
+	float: left;
+}
+.msg-container .msg-send-wrap {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-top: 1px solid #dee6ee;
+}
+.msg-container .msg-send-content {
+	display: block;
+	resize: none;
+	height: 80px;
+	width: 100%;
+	border:none;
+	padding: 10px;
+	box-sizing: border-box;
+	outline: none;
+}
+.msg-container .msg-btn-wrap {
+	height: 30px;
+	text-align: right;
+}
+.msg-container .msg-send-btn {
+	display: inline-block;
+	background: blue;
+	color: white;
+	border-radius: 3px;
+	padding: 0 10px;
+	line-height: 30px;
+	margin-right: 20px;
+}

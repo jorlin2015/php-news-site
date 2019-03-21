@@ -10,4 +10,7 @@ class Author
 	public static function isLogin(){
 		return !empty(Session::get('uid'));
 	}
+	public static function getUser(){
+		return Session::get('uid');
+	}
 }

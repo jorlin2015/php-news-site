@@ -1,6 +1,0 @@
-{foreach $list as $l}
-<li class="item"><a target="_blank" href="/detail/{$current}/{$l.id}">{$l.title}</a></li>
-{/foreach}
-{if $hasMore}
-<li class="item more" data-index="10" data-current="{$current}"><a href="javascript:void(0);">查看更多</a></li>
-{/if}

@@ -9,9 +9,12 @@ html body {
 	height: 100%;
 	width: 100%;
 	background: #f4f4f4;
+	font-size: 14px;
 }
 ul,li {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 a {
@@ -23,58 +26,33 @@ a:hover {
 	text-decoration: underline;
 }
 
-.header {
-	background: #01204f;
-}
-.header .nav {
-	overflow: hidden;
-	width: 1200px;
-	margin: 0 auto;
-}
-.header .nav .item {
-	float: left;
-}
-.header .nav .item a {
-	display: block;
-	line-height: 40px;
-	padding: 0 5px;
-	color: #fff;
-}
-.header .nav .item.current {
-	background: red;
+::-webkit-scrollbar {
+    width: 8px
 }
 
-.list, .detail {
-	width: 800px;
-	padding: 20px 200px;
-	margin: 20px auto;
-	background: #fff;
-	margin-bottom: 101px;
-}
-.list .item {
-	margin-bottom: 20px;
-}
-.detail h1 {
-	text-align: center;
+::-webkit-scrollbar:horizontal {
+    height: 8px
 }
 
-.footer {
-    width: 100%;
-    min-width: 1000px;
-    height: 80px;
-    border-top: 1px solid #e0e0e0;
-    background: #ebebeb;
-    position: absolute;
-    top: 100%;
-    margin-top: -81px;
+::-webkit-scrollbar-button {
+    width: 8px;
+    height: 1px
 }
 
-.footer footer {
-	width: 1200px;
-    height: auto;
-    margin: 0 auto;
-    color: #7b7b7b;
-    line-height: 24px;
-    text-align: center;
-    padding: 15px 0 0;
+::-webkit-scrollbar-track {
+    background: transparent;
+    border: thin solid #f2f2f2;
+    -webkit-box-shadow: 0 0 3px #dfdfdf inset;
+    box-shadow: inset 0 0 3px #dfdfdf;
+    border-radius: 10px
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border: thin solid gray;
+    border-radius: 10px
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7d7d7d
 }

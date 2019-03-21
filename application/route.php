@@ -14,9 +14,10 @@ return [
         'current' => '\w+',
     ],
     'login' => ['login/index', ['method' => 'post|get']],
-    'logout' => ['login/out', ['method' => 'get']],
-    'more/:current' => ['index/more', ['method' => 'get']],
-    'index/:current'   => ['index/index', ['method' => 'get']],
-    'detail/:current/:id' => ['index/detail',['method' => 'get'], ['id' => '\d+']],
-    'splider/[:name]/[:limit]/[:start]' => ['pictures/index', ['method' => 'get']]
+    'logout' => ['login/out', ['method' => 'post|get']],
+    'register' => ['login/register', ['method' => 'post|get']],
+    'index/getMessage' => ['index/getMessage', ['method' => 'get']],
+    'index/getContacts' => ['index/getContacts', ['method' => 'get']],
+    'index/getRoomMember' => ['index/getRoomMember', ['method' => 'get']],
+    'index/toBeFriend' => ['index/toBeFriend', ['method' => 'post']]
 ];

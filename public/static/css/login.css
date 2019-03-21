@@ -1,0 +1,18 @@
+.login-wrap {
+	padding: 20px;
+	border: solid 1px #333;
+	border-radius: 3px;
+	width: 300px;
+	background: #fff;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.login-wrap .error-wrap {
+	text-align: center;
+	color:red;
+}
+.login-wrap label span {
+	margin-right: 20px;
+}
