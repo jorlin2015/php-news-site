@@ -3,6 +3,9 @@ var index = {
 		'room' : {},
 		'friend' : {}
 	},
+	/**
+	 *获取联系人列表，包括房间和好友
+	 */
 	getContacts : function(id){
 		var self = this;
 		$.ajax({
@@ -32,8 +35,8 @@ var index = {
 				name = $(this).text();
 			$(this).parent().siblings().find('a').removeClass('current');
 			$(this).addClass('current');
-			$('.msg-title').html($(this).text());
-			self.getMessage(type, id);
+			// $('.msg-title').html(name);
+			self.getMessage(type, id, name);
 			if(type == 1){//房间
 				self.getRoomMember(id);
 			}else{
@@ -49,28 +52,29 @@ var index = {
 			index.sendMessage(message);
 		});
 		$('.room-contacts-container').on('click','.toBeFriend',function(){
-			self.toBeFriend($(this).data('id'));
+			var id = $(this).data('id'),
+				friend = $('.contacts-container .item a[data-id=' + id + ']');
+			if(friend.length){
+				friend.click();
+			}else{
+				self.toBeFriend(id);
+			}
 		});
 	},
 	toBeFriend : function(id){
-		var friend = $('.contacts-container .item a[data-id=' + id + ']'),
-			self = this;
-		if(friend.length){
-			friend.click();
-		}else{
-			$.ajax({
-				url : '/index/toBeFriend',
-				type : 'post',
-				dataType : 'json',
-				data : {
-					id : id
-				},
-				success : function(result){
-					self.getContacts(id);
-				},
-				error : function(){}
-			});
-		}
+		var self = this;
+		$.ajax({
+			url : '/index/toBeFriend',
+			type : 'post',
+			dataType : 'json',
+			data : {
+				id : id
+			},
+			success : function(result){
+				self.getContacts(id);
+			},
+			error : function(){}
+		});
 	},
 	/**
 	 *根据房间id获取在线成员
@@ -101,8 +105,9 @@ var index = {
 	/**
 	 *根据房间或者好友id获取消息列表
 	 */
-	getMessage : function(type, id){
+	getMessage : function(type, id, name){
 		var self = this;
+		chat.renderTitle(type,id,name);
 		$.ajax({
 			url : '/index/getMessage',
 			type : 'get',
@@ -138,7 +143,11 @@ var index = {
 			name : this.name,
 			list : data
 		};
-		this.ws.send(JSON.stringify(data));
+		if(this.ws){
+			this.ws.send(JSON.stringify(data));
+		}else{
+			setTimeout(()=>this._listenMessage(data),200);
+		}
 	},
 	/**
 	 *Socket 监听
@@ -153,9 +162,13 @@ var index = {
 			self._updateMessage(data);
 			var type = data.type,
 				id = type==1?data.to:data.from,
-				item = $('.contacts-container .item a.current[data-id=' + id + '][data-type=' + type + ']')
+				item = $('.contacts-container .item a[data-id=' + id + '][data-type=' + type + ']');
 			if(data.action == 'message' && item.length){
-				chat.receiveMessage(data);
+				if(item.hasClass('current')){
+					chat.receiveMessage(data);
+				}
+			}else{
+				chat.newContact(data);
 			}
 		};
 		this.ws = ws;
@@ -169,6 +182,6 @@ var index = {
 	from : $('body').data('id'),
 	name : $('body').data('name')
 };
-index.getContacts();
-index.bindEvent();
 index.initSocket();
+index.bindEvent();
+index.getContacts();

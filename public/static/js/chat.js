@@ -28,24 +28,44 @@ var chat = {
 		$('.msg-container').removeClass('room-msg');
 		$('.room-contacts-container').removeClass('active')
 	},
-	receiveMessage : function(data){
+	receiveMessage : function(c){
+		c.time = DateUtil.format(new Date(), 'yyyy-MM-dd HH:mm:ss');
 		var tmpl = `<div class="chat-item chat-other">
-						<span class="chat-name">${data.name}</span><span>:</span><span class="chat-msg">${data.content}</span>
+						<div class="chat-title">
+							<span class="chat-name">${c.name}</span><span>:</span><span class="chat-time">${c.time}</span>
+						</div>
+						<div class="chat-content">
+							<span class="chat-msg">${c.content}</span>
+						</div>
 					</div>`;
 		$('.msg-container .msg-content .msg-content-scroll').append(tmpl);
 		this._scrollBottom();
 	},
-	sendMessage : function(data){
+	sendMessage : function(c){
+		c.time = DateUtil.format(new Date(), 'yyyy-MM-dd HH:mm:ss');
 		var tmpl = `<div class="chat-item chat-me">
-						<span class="chat-name">我</span><span>:</span><span class="chat-msg">${data.content}</span>
+						<div class="chat-title">
+							<span class="chat-name">我</span><span>:</span><span class="chat-time">${c.time}</span>
+						</div>
+						<div class="chat-content">
+							<span class="chat-msg">${c.content}</span>
+						</div>
 					</div>`;
 		$('.msg-container .msg-content .msg-content-scroll').append(tmpl);
 		this._scrollBottom();
+	},
+	//新消息并且之前没有聊过天
+	newContact : function(c){
+		var tmpl = `
+				<li class="item"><a href="javascript:void(0);" data-type="${c.type}" data-id="${c.from}">${c.name}</a></li>
+		`;
+		$('.contacts-container').append(tmpl);
 	},
 	renderMessage : function(data,me){
 		for(var i = 0; i < data.length; i++){
 			var item = data[i],
 				from = item.id;
+			item.time = DateUtil.format(item.time, 'yyyy-MM-dd HH:mm:ss');
 			if(from == me){
 				item.className = 'chat-me';
 				item.name = "我";
@@ -56,11 +76,25 @@ var chat = {
 		var tmpl = `
 				${data.map(c=>`
 					<div class="chat-item ${c.className}">
-						<span class="chat-name">${c.name}</span><span>:</span><span class="chat-msg">${c.content}</span>
+						<div class="chat-title">
+							<span class="chat-name">${c.name}</span><span>:</span><span class="chat-time">${c.time}</span>
+						</div>
+						<div class="chat-content">
+							<span class="chat-msg">${c.content}</span>
+						</div>
 					</div>
 				`).join('')}
 		`;
 		$('.msg-container .msg-content .msg-content-scroll').html(tmpl);
 		this._scrollBottom();
+	},
+	renderTitle : function(type,id,name){
+		$('.msg-title').html(`
+				<span class="msg-name">${name}</span><a href="/history?type=${type}&&id=${id}">更多</a>
+		`);
+	},
+	renderHistory : function(data, me){
+		this.renderMessage(data,me);
+		//TODO 分页
 	}
 };

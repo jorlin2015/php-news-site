@@ -87,6 +87,9 @@
 	overflow: hidden;
 	line-height: 20px;
 }
+.msg-container .chat-item .chat-title,.msg-container .chat-item .chat-content {
+	overflow: hidden;
+}
 .msg-container .chat-item.chat-me span {
 	float: right;
 }

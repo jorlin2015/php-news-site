@@ -47,6 +47,7 @@ class Worker extends Server
                 break;
             case 'contacts':
                 $this->setName($connection->id,$data['name']);
+                $this->connections['friend'][$data['from']] = $connection;
                 foreach ($data['list'] as $key => $value) {
                     $type = $value['type'];
                     if($type == 1){//聊天室
@@ -56,8 +57,6 @@ class Worker extends Server
                             $this->connections['room'][$roomId] = [];
                         }
                         $this->connections['room'][$roomId][$data['from']] = $connection;
-                    }else if($type == 2){//私聊
-                        $this->connections['friend'][$data['from']] = $connection;
                     }
                 }
                 break;

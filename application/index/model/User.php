@@ -8,11 +8,16 @@ use app\index\model\Room;
 use app\index\model\RoomUser;
 
 class User extends Model{
-	private const QUERYSQL = "select t.user_id, t.user_name, t.user_alias, t.user_img from t_user t where t.user_name=:name and t.user_pwd=:pwd";
+	private const QUERYSQLBYNAMEANDPWD = "select t.user_id, t.user_name, t.user_alias, t.user_img from t_user t where t.user_name=:name and t.user_pwd=:pwd";
 	private const SAVESQL = "insert into t_user(user_name,user_alias,user_pwd,user_email,user_create_time) values(:name, :alias, :pwd, :email, :time)";
+	private const QUERYSQLBYNAME = "select t.user_id from t_user t where t.user_name=:name";
 
+	public static function getUserByName($name){
+		$result = Db::query(self::QUERYSQLBYNAME, ["name" => $name]);
+		return $result;
+	}
 	public static function getUserByNameAndPwd($name, $pwd){
-		$result = Db::query(self::QUERYSQL, ["name" => $name, "pwd" => $pwd]);
+		$result = Db::query(self::QUERYSQLBYNAMEANDPWD, ["name" => $name, "pwd" => $pwd]);
 		return $result;
 	}
 	public static function saveUser($name, $pwd, $email, $alias){

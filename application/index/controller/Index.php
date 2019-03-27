@@ -14,7 +14,6 @@ class Index extends BaseController
     public function index()
     {
         $user = Author::getUser();
-        $uid = $user["user_id"];
         $params = [
             "user" => $user
         ];

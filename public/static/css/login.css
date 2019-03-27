@@ -13,6 +13,30 @@
 	text-align: center;
 	color:red;
 }
+.login-wrap .btn-wrap {
+	text-align: center;
+}
+.login-wrap .btn-login, .login-wrap .btn-register {
+	cursor: pointer;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    border: solid 1px #dee6ee;
+    text-align: center;
+    margin-right: 20px;
+    display: inline-block;
+    outline: none;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+.login-wrap .btn-login:hover,.login-wrap .btn-register:hover {
+	text-decoration: none;
+	color: #fff;
+	background-color: #00a;
+}
+.login-wrap label {
+	margin-left: 50px;
+}
 .login-wrap label span {
 	margin-right: 20px;
 }

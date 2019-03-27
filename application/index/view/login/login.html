@@ -8,9 +8,13 @@
 <body>
     <form action="/login" method="post" class="login-wrap" name="loginForm">
         {notempty name="msg"}<p class="error-wrap">{$msg}</p>{/notempty}       
-        <p><label><span>账号:</span><input type="text" name="username" placeholder="请输入账号" /></label></p>
-        <p><label><span>密码:</span><input type="password" name="password" placeholder="请输入密码" /></label></p>
-        <a href="javascript:loginForm.submit();">登录</button>&nbsp;&nbsp;<a href="/register">注册</a>
+        <p><label><span>账号:</span><input type="text" name="username" required="required" placeholder="请输入账号" /></label></p>
+        <p><label><span>密码:</span><input type="password" name="password" required="required" placeholder="请输入密码" /></label></p>
+        <p><label><input type="checkbox" name="remember" />5天内自动登录</label></p>
+        <p class="btn-wrap">
+            <input type="submit" value="登录" class="btn-login"/>
+            <a href="/register" class="btn-register">注册</a>
+        </p>
     </form>
 </body>
 </html>

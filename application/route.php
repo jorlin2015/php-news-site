@@ -19,5 +19,7 @@ return [
     'index/getMessage' => ['index/getMessage', ['method' => 'get']],
     'index/getContacts' => ['index/getContacts', ['method' => 'get']],
     'index/getRoomMember' => ['index/getRoomMember', ['method' => 'get']],
-    'index/toBeFriend' => ['index/toBeFriend', ['method' => 'post']]
+    'index/toBeFriend' => ['index/toBeFriend', ['method' => 'post']],
+    'history' => ['history/index', ['method' => 'get']],
+    'history/getMessage' => ['history/getMessage', ['method' => 'get']]
 ];

@@ -5,35 +5,28 @@
     <title>聊天室</title>
     <link rel="stylesheet" type="text/css" href="/static/css/common.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/history.css" />
 </head>
-<body data-id="{$user.user_id}" data-name="{$user.user_alias}">
+<body data-id="{$user.user_id}" data-name="{$user.user_alias}" class="msg-history">
     <div class="banner-container">
         <span class="welcome">欢迎{$user.user_alias}</span><a href="/logout" class="logout">退出</a>
     </div>
     <div class="im-container">
-        <ul class="contacts-container">
-        </ul>
         <div class="msg-container">
-            <div class="msg-title">
-            </div>
             <div class="msg-content">
                 <div class="msg-content-scroll">
                 </div>
             </div>
-            <div class="msg-send-wrap">
-                <textarea class="msg-send-content"></textarea>
-                <div class="msg-btn-wrap">
-                    <a class="msg-send-btn" href="javascript:void(0)">发送</a>
-                </div>
-            </div>
         </div>
-        <ul class="room-contacts-container">
-            
-        </ul>
     </div>
+    <script type="text/javascript">
+        var data = {};
+        data.id = '{$id}';
+        data.type = '{$type}';
+    </script>
     <script type="text/javascript" src="/static/js/jquery.js"></script>
     <script type="text/javascript" src="/static/js/date.js"></script>
-    <script type="text/javascript" src="/static/js/index.js"></script>
+    <script type="text/javascript" src="/static/js/history.js"></script>
     <script type="text/javascript" src="/static/js/chat.js"></script>
 </body>
 </html>

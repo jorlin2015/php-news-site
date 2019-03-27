@@ -6,13 +6,19 @@
     <link rel="stylesheet" type="text/css" href="/static/css/common.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/login.css" />
 <body>
-    <form action="/register" method="post" class="login-wrap" name="registerForm">
+    <form action="/register" method="post" class="login-wrap" onsubmit="return login.checkRegister();">
         <p><label><span>账号:</span><input type="text" name="username" placeholder="请输入账号" required="required" /></label></p>
         <p><label><span>密码:</span><input type="password" name="password" placeholder="请输入密码" required="required" /></label></p>
         <p><label><span>重复密码:</span><input type="password" name="confirmPassword" placeholder="请确认密码" required="required" /></label></p>
         <p><label><span>邮箱:</span><input type="email" name="email" placeholder="请输入邮箱" required="required" /></label></p>
         <p><label><span>昵称:</span><input type="text" name="alias" placeholder="请输入昵称" required="required" /></label></p>
-        <a href="javascript:registerForm.submit();">注册</a>
+        <p class="btn-wrap">
+            <input type="submit" value="注册" class="btn-register"/>
+            <a href="/login" class="btn-login">直接登录</a>
+        </p>
     </form>
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/login.js"></script>
+    {notempty name="msg"}<script type="text/javascript">console.log($('.login-wrap [name=username]').get(0));$('.login-wrap [name=username]').get(0).setCustomValidity('{$msg}');</script>{/notempty}
 </body>
 </html>
