@@ -833,3 +833,39 @@ Stack trace:
 2019-03-25 10:44:15 pid:781 Workerman[server.php] stop 
 2019-03-25 10:44:15 pid:781 Workerman[server.php] not run
 2019-03-25 10:45:12 pid:787 Workerman[server.php] start in DAEMON mode
+2019-03-29 16:18:11 pid:790 think\exception\ErrorException: Error while sending STMT_EXECUTE packet. PID=790 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:449
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'Error while sen...', '/Users/zhangcha...', 449, Array)
+#1 /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php(449): PDOStatement->execute()
+#2 [internal function]: think\db\Connection->execute('insert into t_m...', Array)
+#3 /Users/zhangchaolin/Sites/thinkphp/library/think/Db.php(178): call_user_func_array(Array, Array)
+#4 /Users/zhangchaolin/Sites/application/index/model/MessagePrivate.php(22): think\Db::__callStatic('execute', Array)
+#5 /Users/zhangchaolin/Sites/application/index/model/MessagePrivate.php(18): app\index\model\MessagePrivate::saveMessage(16, 10, '????', 1)
+#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(32): app\index\model\MessagePrivate::saveTextMessage(16, 10, '????')
+#7 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(45): app\push\controller\Worker->savePrivateMessage(Array)
+#8 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(26): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
+#9 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
+#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
+#11 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #190)
+#12 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#13 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#14 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#15 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#16 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#17 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#18 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#19 [internal function]: think\worker\Server->__construct()
+#20 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#21 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
+#22 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
+#23 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#24 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#25 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
+#26 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
+#27 {main}
+2019-03-29 16:18:11 pid:790 Worker[790] process terminated
+2019-03-29 16:18:11 pid:789 worker[none:790] exit with status 64000
+2019-03-30 05:20:57 pid:789 Workerman[server.php] stopping ...
+2019-03-30 17:28:05 pid:842 Workerman[server.php] start in DAEMON mode
+2019-03-30 17:29:17 pid:855 Workerman[server.php] start in DAEMON mode
+2019-03-31 22:32:36 pid:857 Workerman[server.php] stopping ...

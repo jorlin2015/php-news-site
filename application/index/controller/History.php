@@ -37,7 +37,7 @@ class History extends BaseController
         return json($result);
     }
     private function getMessageFromRoom($id, $page, $size){
-        return MessageRoom::getMessagePage($id, $page, $size);     
+        return MessageRoom::getMessagePage($id, $page, $size);
     }
     private function getMessageFromFriend($id, $page, $size){
         $uid = (Author::getUser())["user_id"];

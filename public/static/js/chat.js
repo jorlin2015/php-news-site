@@ -90,7 +90,7 @@ var chat = {
 	},
 	renderTitle : function(type,id,name){
 		$('.msg-title').html(`
-				<span class="msg-name">${name}</span><a href="/history?type=${type}&&id=${id}">更多</a>
+				<span class="msg-name">${name}</span><a href="/history?type=${type}&id=${id}">更多</a>
 		`);
 	},
 	renderHistory : function(data, me){
