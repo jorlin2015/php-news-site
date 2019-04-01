@@ -17,7 +17,7 @@ class MessageRoom extends Model{
 		return Db::query(self::MESSAGESQL, ["id" => $room]);
 	}
 	public static function getMessageCount($room){
-		return Db::query(self::MESSAGESQLCONT, ["id" => $room])['sum'];
+		return Db::query(self::MESSAGESQLCONT, ["id" => $room])[0]['sum'];
 	}
 	public static function getMessagePage($room, $page, $size){
 		$start = ($page - 1) * $size;

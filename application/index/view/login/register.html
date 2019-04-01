@@ -19,6 +19,12 @@
     </form>
     <script type="text/javascript" src="/static/js/jquery.js"></script>
     <script type="text/javascript" src="/static/js/login.js"></script>
-    {notempty name="msg"}<script type="text/javascript">console.log($('.login-wrap [name=username]').get(0));$('.login-wrap [name=username]').get(0).setCustomValidity('{$msg}');</script>{/notempty}
+    {notempty name="msg"}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.login-wrap [name=username]').get(0).setCustomValidity('{$msg}');
+        });
+    </script>
+    {/notempty}
 </body>
 </html>

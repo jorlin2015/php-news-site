@@ -1,11 +1,5 @@
 var historyMsg = {
 	/**
-	 *绑定页面事件
-	 */
-	bindEvent : function(){
-		
-	},
-	/**
 	 *根据房间或者好友id获取消息列表
 	 */
 	getMessage : function(type, id, page, size){
@@ -21,11 +15,22 @@ var historyMsg = {
 				size : size
 			},
 			success : function(result){
-				chat.renderHistory(result, $('body').data('id'));
+				self._renderPager(result, function(pn){
+					self.getMessage(type, id, pn, size);
+				});
+				chat.renderHistory(result.list, $('body').data('id'));
 			},
 			error : function(){}
 		});
 	},
+	_renderPager : function(result,callback){
+		var params = {
+			target : $('.msg-history .msg-pager'),
+			totalCount : result.totalCount,
+			pn : result.current_page,
+			callback : callback
+		};
+		new Pager(params);
+	}
 };
-historyMsg.bindEvent();
 historyMsg.getMessage(data.type, data.id, 1, 10);

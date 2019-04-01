@@ -19,11 +19,12 @@ ul,li {
 
 a {
 	text-decoration: none;
-	color: #222;
+	color: #383d48;
 }
 
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
+    color: #448cff;
 }
 
 ::-webkit-scrollbar {

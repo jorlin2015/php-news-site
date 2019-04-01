@@ -64,20 +64,35 @@
  .room-contacts-container.active {
 	display: block;
 }
-.room-contacts-container .item a, .room-contacts-container .item span {
-	padding-left: 10px;
-	line-height: 24px;
+.room-contacts-container .item {
+	overflow: hidden;
+	line-height: 30px;
+	padding: 0 10px;
+}
+.room-contacts-container .item .name {
+	float: left;
+}
+.room-contacts-container .item .toBeFriend {
+	float: right;
+	
 }
 .msg-container .msg-title {
 	border-bottom: 1px solid #dee6ee;
 	height: 50px;
 	padding-left: 20px;
+	padding-right: 20px;
 	line-height: 50px;
+}
+.msg-container .msg-title .msg-name {
+	float: left;
+}
+.msg-container .msg-title .more {
+	float: right;
 }
 .msg-container .msg-content {
 	position: absolute;
 	top: 51px;
-	bottom: 113px;
+	bottom: 133px;
 	left: 0;
 	right: 0;
 	overflow: auto;
@@ -114,12 +129,13 @@
 	outline: none;
 }
 .msg-container .msg-btn-wrap {
-	height: 30px;
+	height: 50px;
+	line-height: 50px;
 	text-align: right;
 }
 .msg-container .msg-send-btn {
 	display: inline-block;
-	background: blue;
+	background: #448cff;
 	color: white;
 	border-radius: 3px;
 	padding: 0 10px;

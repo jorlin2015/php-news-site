@@ -8,7 +8,7 @@ use app\index\model\MessagePrivate;
 
 class Worker extends Server
 {
-    protected $socket = 'websocket://127.0.0.1:2346';
+    protected $socket = 'websocket://172.16.22.2:2346';
     protected $processes = 1;
     private $_name = [];
     protected $connections = [

@@ -1,5 +1,25 @@
 .msg-history .msg-container {
 	float: none;
-	width: auto;
 	border-left: 1px solid #dee6ee;
+	position: absolute;
+	width: auto;
+	height: auto;
+	top: 20px;
+	bottom: 70px;
+	left: 20px;
+	right: 20px;
+}
+.msg-history .msg-container .msg-content {
+	top: 0;
+	bottom: 0;
+	padding: 10px 0;
+}
+.msg-history .msg-pager {
+	position: absolute;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
 }

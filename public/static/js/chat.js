@@ -57,7 +57,7 @@ var chat = {
 	//新消息并且之前没有聊过天
 	newContact : function(c){
 		var tmpl = `
-				<li class="item"><a href="javascript:void(0);" data-type="${c.type}" data-id="${c.from}">${c.name}</a></li>
+				<li class="item"><a class="name" href="javascript:void(0);" data-type="${c.type}" data-id="${c.from}">${c.name}</a></li>
 		`;
 		$('.contacts-container').append(tmpl);
 	},
@@ -90,7 +90,7 @@ var chat = {
 	},
 	renderTitle : function(type,id,name){
 		$('.msg-title').html(`
-				<span class="msg-name">${name}</span><a href="/history?type=${type}&id=${id}">更多</a>
+				<span class="msg-name">${name}</span><a class="more" href="/history?type=${type}&id=${id}">更多</a>
 		`);
 	},
 	renderHistory : function(data, me){

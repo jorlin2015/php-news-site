@@ -869,3 +869,4 @@ Stack trace:
 2019-03-30 17:28:05 pid:842 Workerman[server.php] start in DAEMON mode
 2019-03-30 17:29:17 pid:855 Workerman[server.php] start in DAEMON mode
 2019-03-31 22:32:36 pid:857 Workerman[server.php] stopping ...
+2019-04-01 10:11:11 pid:801 Workerman[server.php] start in DAEMON mode

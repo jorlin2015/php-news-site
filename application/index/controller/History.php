@@ -28,13 +28,28 @@ class History extends BaseController
         $size = input('get.size');
         switch ($type) {
             case '1'://房间
-                $result = $this->getMessageFromRoom($id, $page, $size);
+                $count = $this->getCountFromRoom($id);
+                $list = $this->getMessageFromRoom($id, $page, $size);
                 break;
             case '2'://好友
-                $result = $this->getMessageFromFriend($id, $page, $size);
+                $count = $this->getCountFromFriend($id);
+                $list = $this->getMessageFromFriend($id, $page, $size);
                 break;
         }
+        $result = [
+            "current_page" => (int)$page,
+            "page_size" => (int)$size,
+            "totalCount" => $count,
+            "list" => $list
+        ];
         return json($result);
+    }
+    private function getCountFromRoom($id){
+        return MessageRoom::getMessageCount($id);
+    }
+    private function getCountFromFriend($id){
+        $uid = (Author::getUser())["user_id"];
+        return MessagePrivate::getMessageCount($id, $uid);
     }
     private function getMessageFromRoom($id, $page, $size){
         return MessageRoom::getMessagePage($id, $page, $size);

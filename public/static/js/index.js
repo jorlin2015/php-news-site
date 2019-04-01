@@ -153,7 +153,7 @@ var index = {
 	 *Socket 监听
 	 */
 	initSocket : function(){
-		var ws = new WebSocket('ws://127.0.0.1:2346'),
+		var ws = new WebSocket('ws://172.16.22.2:2346'),
 			self = this;
 		ws.onopen = function() {
 		};

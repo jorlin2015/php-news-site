@@ -5,6 +5,7 @@
     <title>聊天室</title>
     <link rel="stylesheet" type="text/css" href="/static/css/common.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/pager.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/history.css" />
 </head>
 <body data-id="{$user.user_id}" data-name="{$user.user_alias}" class="msg-history">
@@ -18,6 +19,8 @@
                 </div>
             </div>
         </div>
+        <div class="msg-pager">
+        </div>
     </div>
     <script type="text/javascript">
         var data = {};
@@ -26,7 +29,8 @@
     </script>
     <script type="text/javascript" src="/static/js/jquery.js"></script>
     <script type="text/javascript" src="/static/js/date.js"></script>
-    <script type="text/javascript" src="/static/js/history.js"></script>
     <script type="text/javascript" src="/static/js/chat.js"></script>
+    <script type="text/javascript" src="/static/js/pager.js"></script>
+    <script type="text/javascript" src="/static/js/history.js"></script>
 </body>
 </html>
