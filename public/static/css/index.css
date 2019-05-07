@@ -104,6 +104,7 @@
 }
 .msg-container .chat-item .chat-title,.msg-container .chat-item .chat-content {
 	overflow: hidden;
+	word-wrap: break-word;
 }
 .msg-container .chat-item.chat-me span {
 	float: right;

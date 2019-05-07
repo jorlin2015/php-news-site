@@ -26,7 +26,11 @@ class Worker extends Server
         $this->handMessage($arr,$connection);
     }
     private function saveRoomMessage($data){
-        MessageRoom::saveTextMessage($data['to'], $data['from'], $data['content']);
+        try {
+            MessageRoom::saveTextMessage($data['to'], $data['from'], $data['content']);
+        } catch (Exception $e) {
+            var_dump('--------------------------------------');
+        }
     }
     private function savePrivateMessage($data){
         MessagePrivate::saveTextMessage($data['from'], $data['to'],  $data['content']);
@@ -38,8 +42,8 @@ class Worker extends Server
                 $data['name'] = $this->getName($connection->id);
                 if($type == 1){//聊天室
                     $roomId = $data['to'];
-                    $this->sendRoomMessage($data, $roomId);
                     $this->saveRoomMessage($data);
+                    $this->sendRoomMessage($data, $roomId);
                 }else if($type == 2){//私聊
                     $this->sendPrivateMessage($data);
                     $this->savePrivateMessage($data);

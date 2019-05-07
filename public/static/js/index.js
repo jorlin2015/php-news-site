@@ -1,3 +1,7 @@
+
+var getFormatCode=function(strValue){
+	return strValue.replace(/\r\n/g, '<br/>').replace(/\n/g, '<br/>').replace(/\s/g, ' ');
+}
 var index = {
 	message : {
 		'room' : {},
@@ -47,9 +51,16 @@ var index = {
 		});
 		$('.msg-send-wrap').on('click','.msg-send-btn',function(){
 			var item = $('.msg-send-wrap .msg-send-content'),
-				message = item.val();
-			item.val('');
-			index.sendMessage(message);
+				message = getFormatCode(item.val().trim());
+			if(message){
+				item.val('');
+				index.sendMessage(message);
+			}
+		});
+		$('.msg-send-wrap .msg-send-content').on('keyup',function(event){
+			if (event.keyCode == 13 && event.altKey) {
+				$('.msg-send-wrap .msg-send-btn').click();
+			}
 		});
 		$('.room-contacts-container').on('click','.toBeFriend',function(){
 			var id = $(this).data('id'),

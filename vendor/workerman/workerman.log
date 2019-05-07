@@ -1,605 +1,49 @@
-2019-03-15 09:54:14 pid:20496 Workerman[server.php] restart 
-2019-03-15 09:54:14 pid:20496 Workerman[server.php] is stopping ...
-2019-03-15 09:54:14 pid:20496 Workerman[server.php] stop success
-2019-03-15 09:55:07 pid:20506 Workerman[server.php] stop 
-2019-03-15 09:55:07 pid:20506 Workerman[server.php] not run
-2019-03-15 09:55:46 pid:20508 Workerman[server.php] status 
-2019-03-15 09:55:46 pid:20508 Workerman[server.php] not run
-2019-03-15 09:55:58 pid:20509 Workerman[server.php] start in DEBUG mode
-2019-03-15 10:25:17 pid:20549 Workerman[server.php] start in DEBUG mode
-2019-03-15 12:01:24 pid:21822 Workerman[server.php] start in DEBUG mode
-2019-03-15 15:46:05 pid:39490 Workerman[server.php] start in DEBUG mode
-2019-03-15 16:16:16 pid:39569 Workerman[server.php] start in DEBUG mode
-2019-03-15 16:53:41 pid:40367 Workerman[server.php] start in DEBUG mode
-2019-03-15 17:00:13 pid:40402 Workerman[server.php] start in DEBUG mode
-2019-03-15 17:13:01 pid:40430 Workerman[server.php] start in DEBUG mode
-2019-03-15 17:21:42 pid:40647 Workerman[server.php] start in DEBUG mode
-2019-03-15 18:38:04 pid:43948 Workerman[server.php] start in DEBUG mode
-2019-03-18 11:08:40 pid:2872 Workerman[server.php] start in DEBUG mode
-2019-03-18 11:12:04 pid:2872 Workerman[server.php] stopping ...
-2019-03-18 11:12:04 pid:2872 Workerman[server.php] has been stopped
-2019-03-18 11:12:06 pid:2884 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:02:44 pid:2884 Workerman[server.php] stopping ...
-2019-03-18 12:02:44 pid:2884 Workerman[server.php] has been stopped
-2019-03-18 12:03:24 pid:3341 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:03:28 pid:3342 Error: Call to undefined method app\push\controller\Worker::setName() in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:70
+2019-04-28 16:00:51 pid:16783 think\exception\ErrorException: Error while sending STMT_CLOSE packet. PID=16783 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:318
 Stack trace:
-#0 [internal function]: app\push\controller\Worker->onConnect(Object(Workerman\Connection\TcpConnection))
-#1 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2302): call_user_func(Array, Object(Workerman\Connection\TcpConnection))
-#2 [internal function]: Workerman\Worker->acceptConnection(Resource id #53)
-#3 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#4 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#5 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#9 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#10 [internal function]: think\worker\Server->__construct()
-#11 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#12 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#13 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#16 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#17 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#18 {main}
-2019-03-18 12:03:28 pid:3342 Worker[3342] process terminated
-2019-03-18 12:03:28 pid:3341 worker[none:3342] exit with status 64000
-2019-03-18 12:03:36 pid:3341 Workerman[server.php] stopping ...
-2019-03-18 12:03:36 pid:3341 Workerman[server.php] has been stopped
-2019-03-18 12:03:40 pid:3346 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:03:45 pid:3347 Error: Call to undefined method app\push\controller\Worker::setName() in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:70
-Stack trace:
-#0 [internal function]: app\push\controller\Worker->onConnect(Object(Workerman\Connection\TcpConnection))
-#1 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2302): call_user_func(Array, Object(Workerman\Connection\TcpConnection))
-#2 [internal function]: Workerman\Worker->acceptConnection(Resource id #53)
-#3 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#4 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#5 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#9 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#10 [internal function]: think\worker\Server->__construct()
-#11 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#12 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#13 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#16 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#17 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#18 {main}
-2019-03-18 12:03:45 pid:3347 Worker[3347] process terminated
-2019-03-18 12:03:45 pid:3346 worker[none:3347] exit with status 64000
-2019-03-18 12:04:17 pid:3346 Workerman[server.php] stopping ...
-2019-03-18 12:04:17 pid:3346 Workerman[server.php] has been stopped
-2019-03-18 12:04:20 pid:3353 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:04:28 pid:3354 think\exception\ErrorException: Illegal string offset 'action' in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:27
-Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(27): think\Error::appError(2, 'Illegal string ...', '/Users/zhangcha...', 27, Array)
-#1 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(23): app\push\controller\Worker->handMessage('{"action":"mess...', Object(Workerman\Connection\TcpConnection))
-#2 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#3 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #63)
-#5 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#11 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#12 [internal function]: think\worker\Server->__construct()
-#13 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#17 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#18 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#19 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#20 {main}
-2019-03-18 12:04:28 pid:3354 Worker[3354] process terminated
-2019-03-18 12:04:28 pid:3353 worker[none:3354] exit with status 64000
-2019-03-18 12:05:30 pid:3353 Workerman[server.php] stopping ...
-2019-03-18 12:05:30 pid:3353 Workerman[server.php] has been stopped
-2019-03-18 12:06:21 pid:3363 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:06:29 pid:3364 Error: Cannot use object of type stdClass as array in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:27
-Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(23): app\push\controller\Worker->handMessage(Object(stdClass), Object(Workerman\Connection\TcpConnection))
-#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#2 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #63)
-#4 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#5 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#10 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#11 [internal function]: think\worker\Server->__construct()
-#12 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#13 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#17 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#18 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#19 {main}
-2019-03-18 12:06:29 pid:3364 Worker[3364] process terminated
-2019-03-18 12:06:29 pid:3363 worker[none:3364] exit with status 64000
-2019-03-18 12:07:14 pid:3363 Workerman[server.php] stopping ...
-2019-03-18 12:07:14 pid:3363 Workerman[server.php] has been stopped
-2019-03-18 12:07:17 pid:3372 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:07:26 pid:3373 Error: Cannot use object of type stdClass as array in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:28
-Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(24): app\push\controller\Worker->handMessage(Object(stdClass), Object(Workerman\Connection\TcpConnection))
-#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#2 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #63)
-#4 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#5 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#10 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#11 [internal function]: think\worker\Server->__construct()
-#12 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#13 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#17 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#18 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#19 {main}
-2019-03-18 12:07:26 pid:3373 Worker[3373] process terminated
-2019-03-18 12:07:26 pid:3372 worker[none:3373] exit with status 64000
-2019-03-18 12:09:43 pid:3372 Workerman[server.php] stopping ...
-2019-03-18 12:09:43 pid:3372 Workerman[server.php] has been stopped
-2019-03-18 12:09:45 pid:3389 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:09:56 pid:3390 think\exception\ErrorException: Use of undefined constant type - assumed 'type' (this will throw an Error in a future version of PHP) in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:30
-Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(30): think\Error::appError(2, 'Use of undefine...', '/Users/zhangcha...', 30, Array)
-#1 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(24): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#2 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#3 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #63)
-#5 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#11 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#12 [internal function]: think\worker\Server->__construct()
-#13 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#17 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#18 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#19 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#20 {main}
-2019-03-18 12:09:56 pid:3390 Worker[3390] process terminated
-2019-03-18 12:09:56 pid:3389 worker[none:3390] exit with status 64000
-2019-03-18 12:10:27 pid:3389 Workerman[server.php] stopping ...
-2019-03-18 12:10:28 pid:3389 Workerman[server.php] has been stopped
-2019-03-18 12:10:30 pid:3396 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:10:38 pid:3397 think\exception\ErrorException: Undefined variable: roomId in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:39
-Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(39): think\Error::appError(8, 'Undefined varia...', '/Users/zhangcha...', 39, Array)
-#1 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(24): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#2 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#3 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #63)
-#5 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#11 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#12 [internal function]: think\worker\Server->__construct()
-#13 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#17 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#18 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#19 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#20 {main}
-2019-03-18 12:10:38 pid:3397 Worker[3397] process terminated
-2019-03-18 12:10:38 pid:3396 worker[none:3397] exit with status 64000
-2019-03-18 12:11:43 pid:3396 Workerman[server.php] stopping ...
-2019-03-18 12:11:43 pid:3396 Workerman[server.php] has been stopped
-2019-03-18 12:11:46 pid:3405 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:14:44 pid:3405 Workerman[server.php] stopping ...
-2019-03-18 12:14:44 pid:3405 Workerman[server.php] has been stopped
-2019-03-18 12:15:00 pid:3425 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:16:27 pid:3425 Workerman[server.php] stopping ...
-2019-03-18 12:16:27 pid:3425 Workerman[server.php] has been stopped
-2019-03-18 12:16:30 pid:3433 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:17:20 pid:3433 Workerman[server.php] stopping ...
-2019-03-18 12:17:20 pid:3433 Workerman[server.php] has been stopped
-2019-03-18 12:19:39 pid:3448 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:19:49 pid:3449 think\exception\ErrorException: Undefined variable: connections in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:33
-Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(33): think\Error::appError(8, 'Undefined varia...', '/Users/zhangcha...', 33, Array)
-#1 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(24): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#2 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#3 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #63)
-#5 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#11 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#12 [internal function]: think\worker\Server->__construct()
-#13 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#17 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#18 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#19 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#20 {main}
-2019-03-18 12:19:49 pid:3449 Worker[3449] process terminated
-2019-03-18 12:19:49 pid:3448 worker[none:3449] exit with status 64000
-2019-03-18 12:21:35 pid:3448 Workerman[server.php] stopping ...
-2019-03-18 12:21:35 pid:3448 Workerman[server.php] has been stopped
-2019-03-18 12:21:39 pid:3457 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:21:45 pid:3457 Workerman[server.php] stopping ...
-2019-03-18 12:21:45 pid:3457 Workerman[server.php] has been stopped
-2019-03-18 12:21:48 pid:3462 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:22:01 pid:3463 think\exception\ErrorException: Undefined offset: 1 in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:33
-Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(33): think\Error::appError(8, 'Undefined offse...', '/Users/zhangcha...', 33, Array)
-#1 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(24): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#2 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#3 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #60)
-#5 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#11 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#12 [internal function]: think\worker\Server->__construct()
-#13 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#17 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#18 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#19 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#20 {main}
-2019-03-18 12:22:01 pid:3463 Worker[3463] process terminated
-2019-03-18 12:22:01 pid:3462 worker[none:3463] exit with status 64000
-2019-03-18 12:23:44 pid:3462 Workerman[server.php] stopping ...
-2019-03-18 12:23:44 pid:3462 Workerman[server.php] has been stopped
-2019-03-18 12:23:47 pid:3474 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:23:54 pid:3475 think\exception\ErrorException: Undefined variable: connection in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:37
-Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(37): think\Error::appError(8, 'Undefined varia...', '/Users/zhangcha...', 37, Array)
-#1 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(24): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#2 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#3 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #63)
-#5 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#11 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#12 [internal function]: think\worker\Server->__construct()
-#13 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#17 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#18 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#19 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#20 {main}
-2019-03-18 12:23:54 pid:3475 Worker[3475] process terminated
-2019-03-18 12:23:54 pid:3474 worker[none:3475] exit with status 64000
-2019-03-18 12:24:34 pid:3474 Workerman[server.php] stopping ...
-2019-03-18 12:24:34 pid:3474 Workerman[server.php] has been stopped
-2019-03-18 12:24:55 pid:3488 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:25:10 pid:3489 think\exception\ErrorException: Undefined offset: 1 in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:48
-Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(48): think\Error::appError(8, 'Undefined offse...', '/Users/zhangcha...', 48, Array)
-#1 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(38): app\push\controller\Worker->sendRoomMessage(Array, 1)
-#2 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(24): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#3 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#4 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #63)
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#12 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#13 [internal function]: think\worker\Server->__construct()
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#17 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#18 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#19 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#20 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#21 {main}
-2019-03-18 12:25:10 pid:3489 Worker[3489] process terminated
-2019-03-18 12:25:10 pid:3488 worker[none:3489] exit with status 64000
-2019-03-18 12:26:49 pid:3488 Workerman[server.php] stopping ...
-2019-03-18 12:26:49 pid:3488 Workerman[server.php] has been stopped
-2019-03-18 12:26:52 pid:3497 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:26:59 pid:3498 think\exception\ErrorException: Undefined offset: 1 in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:49
-Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(49): think\Error::appError(8, 'Undefined offse...', '/Users/zhangcha...', 49, Array)
-#1 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(38): app\push\controller\Worker->sendRoomMessage(Array, 1)
-#2 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(24): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#3 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#4 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #63)
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#12 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#13 [internal function]: think\worker\Server->__construct()
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#17 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#18 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#19 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#20 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#21 {main}
-2019-03-18 12:26:59 pid:3498 Worker[3498] process terminated
-2019-03-18 12:26:59 pid:3497 worker[none:3498] exit with status 64000
-2019-03-18 12:28:13 pid:3497 Workerman[server.php] stopping ...
-2019-03-18 12:28:13 pid:3497 Workerman[server.php] has been stopped
-2019-03-18 12:28:15 pid:3507 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:28:22 pid:3508 think\exception\ErrorException: Undefined offset: 1 in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:51
-Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(51): think\Error::appError(8, 'Undefined offse...', '/Users/zhangcha...', 51, Array)
-#1 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(40): app\push\controller\Worker->sendRoomMessage(Array, 1)
-#2 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(24): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#3 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#4 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #64)
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#12 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#13 [internal function]: think\worker\Server->__construct()
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#17 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#18 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#19 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#20 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#21 {main}
-2019-03-18 12:28:22 pid:3508 Worker[3508] process terminated
-2019-03-18 12:28:22 pid:3507 worker[none:3508] exit with status 64000
-2019-03-18 12:29:33 pid:3507 Workerman[server.php] stopping ...
-2019-03-18 12:29:33 pid:3507 Workerman[server.php] has been stopped
-2019-03-18 12:29:36 pid:3519 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:29:49 pid:3520 think\exception\ErrorException: Undefined offset: 1 in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:51
-Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(51): think\Error::appError(8, 'Undefined offse...', '/Users/zhangcha...', 51, Array)
-#1 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(40): app\push\controller\Worker->sendRoomMessage(Array, 1)
-#2 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(24): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#3 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#4 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #60)
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#12 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#13 [internal function]: think\worker\Server->__construct()
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#17 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#18 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#19 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#20 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#21 {main}
-2019-03-18 12:29:49 pid:3520 Worker[3520] process terminated
-2019-03-18 12:29:49 pid:3519 worker[none:3520] exit with status 64000
-2019-03-18 12:30:42 pid:3519 Workerman[server.php] stopping ...
-2019-03-18 12:30:42 pid:3519 Workerman[server.php] has been stopped
-2019-03-18 12:30:45 pid:3526 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:30:50 pid:3527 think\exception\ErrorException: Undefined offset: 1 in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:51
-Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(51): think\Error::appError(8, 'Undefined offse...', '/Users/zhangcha...', 51, Array)
-#1 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(40): app\push\controller\Worker->sendRoomMessage(Array, 1)
-#2 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(24): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#3 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#4 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #60)
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#12 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#13 [internal function]: think\worker\Server->__construct()
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#17 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#18 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#19 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#20 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#21 {main}
-2019-03-18 12:30:50 pid:3527 Worker[3527] process terminated
-2019-03-18 12:30:50 pid:3526 worker[none:3527] exit with status 64000
-2019-03-18 12:32:56 pid:3526 Workerman[server.php] stopping ...
-2019-03-18 12:32:56 pid:3526 Workerman[server.php] has been stopped
-2019-03-18 12:33:03 pid:3535 Workerman[server.php] start in DEBUG mode
-2019-03-18 12:33:14 pid:3536 think\exception\ErrorException: Undefined offset: 1 in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:50
-Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(50): think\Error::appError(8, 'Undefined offse...', '/Users/zhangcha...', 50, Array)
-#1 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(39): app\push\controller\Worker->sendRoomMessage(Array, 1)
-#2 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(24): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#3 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#4 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #60)
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#12 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#13 [internal function]: think\worker\Server->__construct()
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#17 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#18 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#19 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#20 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#21 {main}
-2019-03-18 12:33:14 pid:3536 Worker[3536] process terminated
-2019-03-18 12:33:14 pid:3535 worker[none:3536] exit with status 64000
-2019-03-18 12:34:33 pid:3535 Workerman[server.php] stopping ...
-2019-03-18 12:34:33 pid:3535 Workerman[server.php] has been stopped
-2019-03-18 12:34:36 pid:3545 Workerman[server.php] start in DEBUG mode
-2019-03-18 17:16:40 pid:3545 Workerman[server.php] stopping ...
-2019-03-18 17:16:40 pid:3545 Workerman[server.php] has been stopped
-2019-03-18 17:17:11 pid:5270 Workerman[server.php] start in DEBUG mode
-2019-03-18 17:30:02 pid:5270 Workerman[server.php] stopping ...
-2019-03-18 17:30:02 pid:5270 Workerman[server.php] has been stopped
-2019-03-18 17:30:42 pid:5303 Workerman[server.php] start in DEBUG mode
-2019-03-18 18:11:35 pid:5303 Workerman[server.php] stopping ...
-2019-03-18 18:11:35 pid:5303 Workerman[server.php] has been stopped
-2019-03-18 18:11:40 pid:5332 Workerman[server.php] start in DEBUG mode
-2019-03-18 18:17:15 pid:5332 Workerman[server.php] stopping ...
-2019-03-18 18:17:15 pid:5332 Workerman[server.php] has been stopped
-2019-03-18 18:17:19 pid:5344 Workerman[server.php] start in DEBUG mode
-2019-03-18 18:19:20 pid:5344 Workerman[server.php] stopping ...
-2019-03-18 18:19:20 pid:5344 Workerman[server.php] has been stopped
-2019-03-18 18:19:24 pid:5351 Workerman[server.php] start in DEBUG mode
-2019-03-18 18:55:46 pid:5351 Workerman[server.php] stopping ...
-2019-03-18 18:55:46 pid:5351 Workerman[server.php] has been stopped
-2019-03-18 18:55:49 pid:5817 Workerman[server.php] start in DEBUG mode
-2019-03-18 18:56:03 pid:5818 ParseError: syntax error, unexpected 'prvate' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST) in /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php:13
-Stack trace:
-#0 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(85): think\__include_file('/Users/zhangcha...')
-#1 [internal function]: think\Loader::autoload('app\\index\\model...')
-#2 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(28): spl_autoload_call('app\\index\\model...')
-#3 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(38): app\push\controller\Worker->saveRoomMessage(Array)
-#4 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(25): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#5 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #60)
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#12 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#13 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#14 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#15 [internal function]: think\worker\Server->__construct()
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#17 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#18 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#19 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#20 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#21 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#22 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#23 {main}
-2019-03-18 18:56:03 pid:5818 Worker[5818] process terminated
-2019-03-18 18:56:03 pid:5817 worker[none:5818] exit with status 64000
-2019-03-18 18:57:40 pid:5820 Worker[5820] process terminated with ERROR: E_COMPILE_ERROR "Cannot use empty array elements in arrays in /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php on line 23"
-2019-03-18 18:57:40 pid:5817 worker[none:5820] exit with status 65280
-2019-03-18 18:58:44 pid:5817 Workerman[server.php] stopping ...
-2019-03-18 18:58:44 pid:5817 Workerman[server.php] has been stopped
-2019-03-18 18:58:47 pid:5833 Workerman[server.php] start in DEBUG mode
-2019-03-18 18:58:57 pid:5834 Worker[5834] process terminated with ERROR: E_COMPILE_ERROR "Cannot use empty array elements in arrays in /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php on line 23"
-2019-03-18 18:58:57 pid:5833 worker[none:5834] exit with status 65280
-2019-03-18 19:00:24 pid:5833 Workerman[server.php] stopping ...
-2019-03-18 19:00:24 pid:5833 Workerman[server.php] has been stopped
-2019-03-18 19:00:25 pid:5843 Workerman[server.php] start in DEBUG mode
-2019-03-18 19:00:36 pid:5844 Worker[5844] process terminated with ERROR: E_COMPILE_ERROR "Cannot use empty array elements in arrays in /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php on line 23"
-2019-03-18 19:00:36 pid:5843 worker[none:5844] exit with status 65280
-2019-03-18 19:02:27 pid:5843 Workerman[server.php] stopping ...
-2019-03-18 19:02:27 pid:5843 Workerman[server.php] has been stopped
-2019-03-18 19:02:28 pid:5857 Workerman[server.php] start in DEBUG mode
-2019-03-18 19:02:51 pid:5858 Worker[5858] process terminated with ERROR: E_COMPILE_ERROR "Cannot use empty array elements in arrays in /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php on line 23"
-2019-03-18 19:02:51 pid:5857 worker[none:5858] exit with status 65280
-2019-03-18 19:06:40 pid:5857 Workerman[server.php] stopping ...
-2019-03-18 19:06:40 pid:5857 Workerman[server.php] has been stopped
-2019-03-18 19:06:43 pid:5872 Workerman[server.php] start in DEBUG mode
-2019-03-18 19:07:03 pid:5873 Worker[5873] process terminated with ERROR: E_COMPILE_ERROR "Cannot use empty array elements in arrays in /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php on line 27"
-2019-03-18 19:07:03 pid:5872 worker[none:5873] exit with status 65280
-2019-03-18 19:09:50 pid:5872 Workerman[server.php] stopping ...
-2019-03-18 19:09:50 pid:5872 Workerman[server.php] has been stopped
-2019-03-18 19:09:52 pid:5884 Workerman[server.php] start in DEBUG mode
-2019-03-18 19:12:29 pid:5884 Workerman[server.php] stopping ...
-2019-03-18 19:12:29 pid:5884 Workerman[server.php] has been stopped
-2019-03-18 19:13:27 pid:5893 Workerman[server.php] start in DEBUG mode
-2019-03-18 21:28:53 pid:5894 think\exception\ErrorException: Error while sending STMT_EXECUTE packet. PID=5894 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:449
-Stack trace:
-#0 [internal function]: think\Error::appError(2, 'Error while sen...', '/Users/zhangcha...', 449, Array)
-#1 /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php(449): PDOStatement->execute()
+#0 /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php(318): think\Error::appError(2, 'Error while sen...', '/Users/zhangcha...', 318, Array)
+#1 /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php(434): think\db\Connection->free()
 #2 [internal function]: think\db\Connection->execute('insert into t_m...', Array)
 #3 /Users/zhangchaolin/Sites/thinkphp/library/think/Db.php(178): call_user_func_array(Array, Array)
-#4 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(27): think\Db::__callStatic('execute', Array)
-#5 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(23): app\index\model\MessageRoom::saveMessage(1, 8, '\xE6\xB0\xB4\xE7\x94\xB5\xE8\xB4\xB9\xE6\xB0\xB4\xE7\x94\xB5...', 1)
-#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(28): app\index\model\MessageRoom::saveTextMessage(1, 8, '\xE6\xB0\xB4\xE7\x94\xB5\xE8\xB4\xB9\xE6\xB0\xB4\xE7\x94\xB5...')
-#7 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(38): app\push\controller\Worker->saveRoomMessage(Array)
-#8 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(25): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
+#4 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(31): think\Db::__callStatic('execute', Array)
+#5 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(27): app\index\model\MessageRoom::saveMessage(1, 10, '111', 1)
+#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(29): app\index\model\MessageRoom::saveTextMessage(1, 10, '111')
+#7 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(42): app\push\controller\Worker->saveRoomMessage(Array)
+#8 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(26): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
 #9 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
 #10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#11 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #98)
+#11 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #101)
 #12 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
 #13 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
 #14 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
 #15 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
 #16 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#17 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#18 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#19 [internal function]: think\worker\Server->__construct()
-#20 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#21 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#22 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#23 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#24 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#25 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#26 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#27 {main}
-2019-03-18 21:28:53 pid:5894 Worker[5894] process terminated
-2019-03-18 21:28:53 pid:5893 worker[none:5894] exit with status 64000
-2019-03-18 21:36:26 pid:6409 think\exception\PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'RMSG_CONTENT' at row 1 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:463
+#17 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#18 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#19 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#20 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#21 [internal function]: think\worker\Server->__construct()
+#22 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#23 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
+#24 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
+#25 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#26 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#27 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
+#28 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
+#29 {main}
+2019-04-28 16:00:51 pid:16783 Worker[16783] process terminated
+2019-04-28 16:00:51 pid:16417 worker[none:16783] exit with status 64000
+2019-04-28 16:06:58 pid:23695 think\exception\PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'RMSG_CONTENT' at row 1 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:463
 Stack trace:
 #0 [internal function]: think\db\Connection->execute('insert into t_m...', Array)
 #1 /Users/zhangchaolin/Sites/thinkphp/library/think/Db.php(178): call_user_func_array(Array, Array)
-#2 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(27): think\Db::__callStatic('execute', Array)
-#3 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(23): app\index\model\MessageRoom::saveMessage(1, 8, '\xE9\x80\x82\xE5\xBE\x97\xE5\xBA\x9C\xE5\x90\x9B\xE4\xB9\xA6...', 1)
-#4 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(28): app\index\model\MessageRoom::saveTextMessage(1, 8, '\xE9\x80\x82\xE5\xBE\x97\xE5\xBA\x9C\xE5\x90\x9B\xE4\xB9\xA6...')
-#5 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(38): app\push\controller\Worker->saveRoomMessage(Array)
-#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(25): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
+#2 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(31): think\Db::__callStatic('execute', Array)
+#3 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(27): app\index\model\MessageRoom::saveMessage(1, 10, '012345678901234...', 1)
+#4 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(29): app\index\model\MessageRoom::saveTextMessage(1, 10, '012345678901234...')
+#5 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(42): app\push\controller\Worker->saveRoomMessage(Array)
+#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(26): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
 #7 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
 #8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#9 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #80)
+#9 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #85)
 #10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
 #11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
 #12 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
@@ -618,33 +62,28 @@ Stack trace:
 #25 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
 #26 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
 #27 {main}
-2019-03-18 21:36:26 pid:6409 Worker[6409] process terminated
-2019-03-18 21:36:26 pid:5893 worker[none:6409] exit with status 64000
-2019-03-19 14:17:55 pid:5893 Workerman[server.php] stopping ...
-2019-03-19 14:17:55 pid:5893 worker[none:6427] exit with status 65280
-2019-03-19 14:17:55 pid:5893 Workerman[server.php] has been stopped
-2019-03-19 14:18:01 pid:8231 Workerman[server.php] start in DEBUG mode
-2019-03-20 00:51:37 pid:1028 Workerman[server.php] start in DEBUG mode
-2019-03-20 12:04:10 pid:1029 think\exception\ErrorException: Error while sending STMT_EXECUTE packet. PID=1029 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:449
+2019-04-28 16:06:58 pid:23695 Worker[23695] process terminated
+2019-04-28 16:06:58 pid:16417 worker[none:23695] exit with status 64000
+2019-04-28 18:04:46 pid:23710 think\exception\PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'RMSG_CONTENT' at row 1 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:463
 Stack trace:
-#0 [internal function]: think\Error::appError(2, 'Error while sen...', '/Users/zhangcha...', 449, Array)
-#1 /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php(449): PDOStatement->execute()
-#2 [internal function]: think\db\Connection->execute('insert into t_m...', Array)
-#3 /Users/zhangchaolin/Sites/thinkphp/library/think/Db.php(178): call_user_func_array(Array, Array)
-#4 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(27): think\Db::__callStatic('execute', Array)
-#5 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(23): app\index\model\MessageRoom::saveMessage(1, 8, 'sdfsdf ', 1)
-#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(28): app\index\model\MessageRoom::saveTextMessage(1, 8, 'sdfsdf ')
-#7 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(38): app\push\controller\Worker->saveRoomMessage(Array)
-#8 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(25): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#9 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#11 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #127)
-#12 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#13 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#14 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#15 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#16 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#17 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#0 [internal function]: think\db\Connection->execute('insert into t_m...', Array)
+#1 /Users/zhangchaolin/Sites/thinkphp/library/think/Db.php(178): call_user_func_array(Array, Array)
+#2 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(31): think\Db::__callStatic('execute', Array)
+#3 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(27): app\index\model\MessageRoom::saveMessage(1, 16, '012345678901234...', 1)
+#4 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(29): app\index\model\MessageRoom::saveTextMessage(1, 16, '012345678901234...')
+#5 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(42): app\push\controller\Worker->saveRoomMessage(Array)
+#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(26): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
+#7 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
+#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
+#9 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #68)
+#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#12 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#13 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#14 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#15 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#16 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#17 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
 #18 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
 #19 [internal function]: think\worker\Server->__construct()
 #20 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
@@ -655,76 +94,28 @@ Stack trace:
 #25 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
 #26 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
 #27 {main}
-2019-03-20 12:04:10 pid:1029 Worker[1029] process terminated
-2019-03-20 12:04:10 pid:1028 worker[none:1029] exit with status 64000
-2019-03-20 17:06:12 pid:1028 Workerman[server.php] stopping ...
-2019-03-20 17:06:12 pid:1028 worker[none:3024] exit with status 65280
-2019-03-20 17:06:12 pid:1028 Workerman[server.php] has been stopped
-2019-03-20 17:06:20 pid:4386 Workerman[server.php] start in DEBUG mode
-2019-03-20 17:11:14 pid:4386 Workerman[server.php] stopping ...
-2019-03-20 17:11:14 pid:4386 Workerman[server.php] has been stopped
-2019-03-20 17:11:23 pid:4410 Workerman[server.php] start in DEBUG mode
-2019-03-20 17:12:50 pid:4410 Workerman[server.php] stopping ...
-2019-03-20 17:12:50 pid:4410 Workerman[server.php] has been stopped
-2019-03-20 17:13:05 pid:4418 Workerman[server.php] start in DEBUG mode
-2019-03-20 17:16:10 pid:4418 Workerman[server.php] stopping ...
-2019-03-20 17:16:10 pid:4418 Workerman[server.php] has been stopped
-2019-03-20 17:16:37 pid:4425 Workerman[server.php] start in DEBUG mode
-2019-03-20 17:18:33 pid:4425 Workerman[server.php] stopping ...
-2019-03-20 17:18:33 pid:4425 Workerman[server.php] has been stopped
-2019-03-20 17:19:13 pid:4435 Workerman[server.php] start in DEBUG mode
-2019-03-20 17:20:07 pid:4436 think\exception\ErrorException: Undefined offset: 10 in /Users/zhangchaolin/Sites/application/push/controller/Worker.php:96
+2019-04-28 18:04:46 pid:23710 Worker[23710] process terminated
+2019-04-28 18:04:46 pid:16417 worker[none:23710] exit with status 64000
+2019-04-28 18:05:04 pid:23905 think\exception\PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'RMSG_CONTENT' at row 1 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:463
 Stack trace:
-#0 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(96): think\Error::appError(8, 'Undefined offse...', '/Users/zhangcha...', 96, Array)
-#1 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(59): app\push\controller\Worker->sendPrivateMessage(Array)
-#2 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(26): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#3 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#4 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #60)
-#6 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#7 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#9 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
-#12 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
-#13 [internal function]: think\worker\Server->__construct()
-#14 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
-#15 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
-#16 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
-#17 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
-#18 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
-#19 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
-#20 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
-#21 {main}
-2019-03-20 17:20:07 pid:4436 Worker[4436] process terminated
-2019-03-20 17:20:07 pid:4435 worker[none:4436] exit with status 64000
-2019-03-20 17:22:26 pid:4435 Workerman[server.php] stopping ...
-2019-03-20 17:22:26 pid:4435 Workerman[server.php] has been stopped
-2019-03-20 17:22:43 pid:4461 Workerman[server.php] start in DEBUG mode
-2019-03-20 17:29:33 pid:4461 Workerman[server.php] stopping ...
-2019-03-20 17:29:33 pid:4461 Workerman[server.php] has been stopped
-2019-03-20 17:29:41 pid:4491 Workerman[server.php] start in DEBUG mode
-2019-03-20 18:29:34 pid:4492 think\exception\ErrorException: Error while sending STMT_EXECUTE packet. PID=4492 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:449
-Stack trace:
-#0 [internal function]: think\Error::appError(2, 'Error while sen...', '/Users/zhangcha...', 449, Array)
-#1 /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php(449): PDOStatement->execute()
-#2 [internal function]: think\db\Connection->execute('insert into t_m...', Array)
-#3 /Users/zhangchaolin/Sites/thinkphp/library/think/Db.php(178): call_user_func_array(Array, Array)
-#4 /Users/zhangchaolin/Sites/application/index/model/MessagePrivate.php(22): think\Db::__callStatic('execute', Array)
-#5 /Users/zhangchaolin/Sites/application/index/model/MessagePrivate.php(18): app\index\model\MessagePrivate::saveMessage(9, 8, 'new test', 1)
-#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(32): app\index\model\MessagePrivate::saveTextMessage(9, 8, 'new test')
-#7 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(45): app\push\controller\Worker->savePrivateMessage(Array)
-#8 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(26): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#9 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#11 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #110)
-#12 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#13 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#14 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#15 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#16 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#17 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#0 [internal function]: think\db\Connection->execute('insert into t_m...', Array)
+#1 /Users/zhangchaolin/Sites/thinkphp/library/think/Db.php(178): call_user_func_array(Array, Array)
+#2 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(31): think\Db::__callStatic('execute', Array)
+#3 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(27): app\index\model\MessageRoom::saveMessage(1, 16, '012345678901234...', 1)
+#4 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(29): app\index\model\MessageRoom::saveTextMessage(1, 16, '012345678901234...')
+#5 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(42): app\push\controller\Worker->saveRoomMessage(Array)
+#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(26): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
+#7 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
+#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
+#9 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #72)
+#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#12 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#13 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#14 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#15 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#16 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#17 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
 #18 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
 #19 [internal function]: think\worker\Server->__construct()
 #20 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
@@ -735,31 +126,28 @@ Stack trace:
 #25 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
 #26 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
 #27 {main}
-2019-03-20 18:29:34 pid:4492 Worker[4492] process terminated
-2019-03-20 18:29:34 pid:4491 worker[none:4492] exit with status 64000
-2019-03-20 18:33:36 pid:4491 Workerman[server.php] stopping ...
-2019-03-20 18:33:36 pid:4491 Workerman[server.php] has been stopped
-2019-03-20 18:33:46 pid:4939 Workerman[server.php] start in DEBUG mode
-2019-03-20 20:02:04 pid:4940 think\exception\ErrorException: Error while sending STMT_EXECUTE packet. PID=4940 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:449
+2019-04-28 18:05:04 pid:23905 Worker[23905] process terminated
+2019-04-28 18:05:04 pid:16417 worker[none:23905] exit with status 64000
+2019-04-28 18:05:45 pid:23908 think\exception\PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'RMSG_CONTENT' at row 1 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:463
 Stack trace:
-#0 [internal function]: think\Error::appError(2, 'Error while sen...', '/Users/zhangcha...', 449, Array)
-#1 /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php(449): PDOStatement->execute()
-#2 [internal function]: think\db\Connection->execute('insert into t_m...', Array)
-#3 /Users/zhangchaolin/Sites/thinkphp/library/think/Db.php(178): call_user_func_array(Array, Array)
-#4 /Users/zhangchaolin/Sites/application/index/model/MessagePrivate.php(22): think\Db::__callStatic('execute', Array)
-#5 /Users/zhangchaolin/Sites/application/index/model/MessagePrivate.php(18): app\index\model\MessagePrivate::saveMessage(9, 16, 'sdfsdf', 1)
-#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(32): app\index\model\MessagePrivate::saveTextMessage(9, 16, 'sdfsdf')
-#7 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(45): app\push\controller\Worker->savePrivateMessage(Array)
-#8 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(26): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#9 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#11 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #81)
-#12 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#13 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#14 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#15 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#16 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#17 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#0 [internal function]: think\db\Connection->execute('insert into t_m...', Array)
+#1 /Users/zhangchaolin/Sites/thinkphp/library/think/Db.php(178): call_user_func_array(Array, Array)
+#2 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(31): think\Db::__callStatic('execute', Array)
+#3 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(27): app\index\model\MessageRoom::saveMessage(1, 16, '012345678901234...', 1)
+#4 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(29): app\index\model\MessageRoom::saveTextMessage(1, 16, '012345678901234...')
+#5 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(42): app\push\controller\Worker->saveRoomMessage(Array)
+#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(26): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
+#7 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
+#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
+#9 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #70)
+#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#12 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#13 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#14 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#15 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#16 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#17 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
 #18 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
 #19 [internal function]: think\worker\Server->__construct()
 #20 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
@@ -770,89 +158,28 @@ Stack trace:
 #25 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
 #26 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
 #27 {main}
-2019-03-20 20:02:04 pid:4940 Worker[4940] process terminated
-2019-03-20 20:02:04 pid:4939 worker[none:4940] exit with status 64000
-2019-03-21 09:36:43 pid:4939 Workerman[server.php] stopping ...
-2019-03-21 09:36:43 pid:4939 worker[none:5389] exit with status 65280
-2019-03-21 09:36:43 pid:4939 Workerman[server.php] has been stopped
-2019-03-08 10:43:57 pid:8494 Workerman[server.php] start in DEBUG mode
-2022-03-22 10:40:09 pid:8494 Workerman[server.php] stopping ...
-2022-03-22 10:40:09 pid:8494 worker[none:8495] exit with status 65280
-2022-03-22 10:40:09 pid:8494 Workerman[server.php] has been stopped
-2019-03-08 12:30:31 pid:989 Workerman[server.php] start in DEBUG mode
-2019-03-23 00:49:06 pid:9989 Workerman[server.php] start in DEBUG mode
-2019-03-23 02:04:45 pid:13768 Workerman[server.php] start in DEBUG mode
-2019-03-23 02:08:02 pid:13778 Workerman[server.php] start in DEBUG mode
-2019-03-23 02:08:05 pid:13778 worker[none:13779] exit with status 11
-2019-03-23 02:08:09 pid:13778 worker[none:13782] exit with status 11
-2019-03-23 02:08:15 pid:13778 worker[none:13783] exit with status 11
-2019-03-23 02:08:15 pid:13778 worker[none:13784] exit with status 11
-2019-03-23 02:08:16 pid:13778 worker[none:13785] exit with status 11
-2019-03-23 02:08:16 pid:13778 worker[none:13786] exit with status 11
-2019-03-23 02:08:16 pid:13778 worker[none:13787] exit with status 11
-2019-03-23 02:08:17 pid:13778 worker[none:13788] exit with status 11
-2019-03-23 02:08:18 pid:13778 worker[none:13789] exit with status 11
-2019-03-23 02:08:56 pid:13778 Workerman[server.php] stopping ...
-2019-03-23 02:08:56 pid:13778 Workerman[server.php] stopping ...
-2019-03-23 02:08:58 pid:13778 worker[none:13790] exit with status 9
-2019-03-23 02:08:58 pid:13778 Workerman[server.php] has been stopped
-2019-03-23 02:09:07 pid:13792 Workerman[server.php] start in DEBUG mode
-2019-03-23 02:09:19 pid:13792 worker[none:13793] exit with status 11
-2019-03-23 02:10:01 pid:13792 Workerman[server.php] stopping ...
-2019-03-23 02:10:03 pid:13792 worker[none:13795] exit with status 9
-2019-03-23 02:10:03 pid:13792 Workerman[server.php] has been stopped
-2019-03-23 02:11:22 pid:13973 Workerman[server.php] start in DEBUG mode
-2019-03-23 02:12:03 pid:13973 worker[none:13974] exit with status 11
-2019-03-23 02:12:15 pid:13973 worker[none:13976] exit with status 11
-2019-03-23 02:12:16 pid:13973 worker[none:13977] exit with status 11
-2019-03-23 02:12:17 pid:13973 worker[none:13978] exit with status 11
-2019-03-23 02:12:17 pid:13973 worker[none:13979] exit with status 11
-2019-03-23 02:12:17 pid:13973 worker[none:13980] exit with status 11
-2019-03-23 02:12:18 pid:13973 worker[none:13981] exit with status 11
-2019-03-23 02:12:19 pid:13973 worker[none:13982] exit with status 11
-2019-03-23 02:12:19 pid:13973 worker[none:13983] exit with status 11
-2019-03-23 02:12:19 pid:13973 worker[none:13984] exit with status 11
-2019-03-23 02:12:20 pid:13973 worker[none:13985] exit with status 11
-2019-03-23 02:12:20 pid:13973 worker[none:13986] exit with status 11
-2019-03-23 02:14:59 pid:13973 Workerman[server.php] stopping ...
-2019-03-23 02:15:00 pid:13973 Workerman[server.php] stopping ...
-2019-03-23 02:15:00 pid:13973 Workerman[server.php] stopping ...
-2019-03-23 02:15:01 pid:13973 worker[none:13987] exit with status 9
-2019-03-23 02:15:01 pid:13973 Workerman[server.php] has been stopped
-2019-03-23 02:34:37 pid:15345 Workerman[server.php] start in DEBUG mode
-2019-03-23 11:52:57 pid:15345 Workerman[server.php] stopping ...
-2019-03-23 11:52:57 pid:15345 Workerman[server.php] has been stopped
-2019-03-23 11:53:03 pid:15612 Workerman[server.php] start in DAEMON mode
-2019-03-24 00:27:15 pid:16155 Workerman[server.php] stop 
-2019-03-24 00:27:15 pid:16155 Workerman[server.php] is stopping ...
-2019-03-24 00:27:15 pid:15614 Workerman[server.php] stopping ...
-2019-03-24 00:27:15 pid:15614 Workerman[server.php] has been stopped
-2019-03-24 00:27:15 pid:16155 Workerman[server.php] stop success
-2019-03-25 10:43:24 pid:776 Workerman[server.php] stop 
-2019-03-25 10:43:24 pid:776 Workerman[server.php] not run
-2019-03-25 10:44:15 pid:781 Workerman[server.php] stop 
-2019-03-25 10:44:15 pid:781 Workerman[server.php] not run
-2019-03-25 10:45:12 pid:787 Workerman[server.php] start in DAEMON mode
-2019-03-29 16:18:11 pid:790 think\exception\ErrorException: Error while sending STMT_EXECUTE packet. PID=790 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:449
+2019-04-28 18:05:45 pid:23908 Worker[23908] process terminated
+2019-04-28 18:05:45 pid:16417 worker[none:23908] exit with status 64000
+2019-04-28 18:06:07 pid:23911 think\exception\PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'RMSG_CONTENT' at row 1 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:463
 Stack trace:
-#0 [internal function]: think\Error::appError(2, 'Error while sen...', '/Users/zhangcha...', 449, Array)
-#1 /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php(449): PDOStatement->execute()
-#2 [internal function]: think\db\Connection->execute('insert into t_m...', Array)
-#3 /Users/zhangchaolin/Sites/thinkphp/library/think/Db.php(178): call_user_func_array(Array, Array)
-#4 /Users/zhangchaolin/Sites/application/index/model/MessagePrivate.php(22): think\Db::__callStatic('execute', Array)
-#5 /Users/zhangchaolin/Sites/application/index/model/MessagePrivate.php(18): app\index\model\MessagePrivate::saveMessage(16, 10, '????', 1)
-#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(32): app\index\model\MessagePrivate::saveTextMessage(16, 10, '????')
-#7 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(45): app\push\controller\Worker->savePrivateMessage(Array)
-#8 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(26): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
-#9 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
-#11 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #190)
-#12 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
-#13 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
-#14 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
-#15 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
-#16 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
-#17 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#0 [internal function]: think\db\Connection->execute('insert into t_m...', Array)
+#1 /Users/zhangchaolin/Sites/thinkphp/library/think/Db.php(178): call_user_func_array(Array, Array)
+#2 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(31): think\Db::__callStatic('execute', Array)
+#3 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(27): app\index\model\MessageRoom::saveMessage(1, 16, '012345678901234...', 1)
+#4 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(29): app\index\model\MessageRoom::saveTextMessage(1, 16, '012345678901234...')
+#5 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(42): app\push\controller\Worker->saveRoomMessage(Array)
+#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(26): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
+#7 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
+#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
+#9 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #74)
+#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#12 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#13 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#14 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#15 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#16 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#17 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
 #18 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
 #19 [internal function]: think\worker\Server->__construct()
 #20 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
@@ -863,10 +190,70 @@ Stack trace:
 #25 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
 #26 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
 #27 {main}
-2019-03-29 16:18:11 pid:790 Worker[790] process terminated
-2019-03-29 16:18:11 pid:789 worker[none:790] exit with status 64000
-2019-03-30 05:20:57 pid:789 Workerman[server.php] stopping ...
-2019-03-30 17:28:05 pid:842 Workerman[server.php] start in DAEMON mode
-2019-03-30 17:29:17 pid:855 Workerman[server.php] start in DAEMON mode
-2019-03-31 22:32:36 pid:857 Workerman[server.php] stopping ...
-2019-04-01 10:11:11 pid:801 Workerman[server.php] start in DAEMON mode
+2019-04-28 18:06:07 pid:23911 Worker[23911] process terminated
+2019-04-28 18:06:07 pid:16417 worker[none:23911] exit with status 64000
+2019-04-28 18:07:09 pid:23915 think\exception\PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'RMSG_CONTENT' at row 1 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:463
+Stack trace:
+#0 [internal function]: think\db\Connection->execute('insert into t_m...', Array)
+#1 /Users/zhangchaolin/Sites/thinkphp/library/think/Db.php(178): call_user_func_array(Array, Array)
+#2 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(31): think\Db::__callStatic('execute', Array)
+#3 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(27): app\index\model\MessageRoom::saveMessage(1, 16, '012345678901234...', 1)
+#4 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(29): app\index\model\MessageRoom::saveTextMessage(1, 16, '012345678901234...')
+#5 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(42): app\push\controller\Worker->saveRoomMessage(Array)
+#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(26): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
+#7 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
+#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
+#9 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #72)
+#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#12 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#13 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#14 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#15 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#16 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#17 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#18 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#19 [internal function]: think\worker\Server->__construct()
+#20 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#21 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
+#22 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
+#23 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#24 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#25 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
+#26 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
+#27 {main}
+2019-04-28 18:07:09 pid:23915 Worker[23915] process terminated
+2019-04-28 18:07:09 pid:16417 worker[none:23915] exit with status 64000
+2019-04-28 18:12:33 pid:23916 think\exception\PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'RMSG_CONTENT' at row 1 in /Users/zhangchaolin/Sites/thinkphp/library/think/db/Connection.php:463
+Stack trace:
+#0 [internal function]: think\db\Connection->execute('insert into t_m...', Array)
+#1 /Users/zhangchaolin/Sites/thinkphp/library/think/Db.php(178): call_user_func_array(Array, Array)
+#2 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(31): think\Db::__callStatic('execute', Array)
+#3 /Users/zhangchaolin/Sites/application/index/model/MessageRoom.php(27): app\index\model\MessageRoom::saveMessage(1, 16, '012345678901234...', 1)
+#4 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(29): app\index\model\MessageRoom::saveTextMessage(1, 16, '012345678901234...')
+#5 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(42): app\push\controller\Worker->saveRoomMessage(Array)
+#6 /Users/zhangchaolin/Sites/application/push/controller/Worker.php(26): app\push\controller\Worker->handMessage(Array, Object(Workerman\Connection\TcpConnection))
+#7 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
+#8 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"action":"mess...')
+#9 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #88)
+#10 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#11 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#12 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#13 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#14 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#15 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#16 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#17 /Users/zhangchaolin/Sites/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#18 /Users/zhangchaolin/Sites/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#19 [internal function]: think\worker\Server->__construct()
+#20 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#21 /Users/zhangchaolin/Sites/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\push\\contro...')
+#22 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(575): think\Loader::controller('worker', 'controller', false, 'Error')
+#23 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#24 /Users/zhangchaolin/Sites/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#25 /Users/zhangchaolin/Sites/thinkphp/start.php(19): think\App::run()
+#26 /Users/zhangchaolin/Sites/server.php(6): require('/Users/zhangcha...')
+#27 {main}
+2019-04-28 18:12:33 pid:23916 Worker[23916] process terminated
+2019-04-28 18:12:33 pid:16417 worker[none:23916] exit with status 64000
+2019-04-30 19:21:54 pid:16417 Workerman[server.php] stopping ...
